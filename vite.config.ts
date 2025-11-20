@@ -6,12 +6,11 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: '/manifesto-tajani/', 
   plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-    },
+resolve: {
+  alias: {
+    "@": path.resolve(import.meta.dirname, "client", "src"),
   },
+},
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
   build: {
