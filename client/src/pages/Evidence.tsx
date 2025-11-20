@@ -16,7 +16,16 @@ export default function Evidence() {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground dark font-sans">
-        <nav className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-[#3b4354]">
+        
+        {/* LINHA DA BANDEIRA ITALIANA (Cyberpunk Style) */}
+        <div 
+          className="sticky top-0 z-[51] w-full h-1.5"
+          style={{
+            background: "linear-gradient(90deg, #39FF14 0%, #39FF14 33.33%, #ffffff 33.33%, #ffffff 66.66%, #FF1E56 66.66%, #FF1E56 100%)"
+          }}
+        ></div>
+
+        <nav className="sticky top-1.5 z-50 w-full bg-black/80 backdrop-blur-md border-b border-[#3b4354]">
           <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <Link href="/">
               <span className="text-xl font-bold text-white cursor-pointer hover:text-[#39FF14] transition-colors tracking-tight">
@@ -55,20 +64,26 @@ export default function Evidence() {
             </p>
           </header>
 
-          {/* O Vídeo com Correção de Tamanho (max-h-[70vh]) */}
-          <section className="bg-[#101622] border-2 border-[#FF1E56] p-1 rounded-lg shadow-[0_0_50px_rgba(255,30,86,0.15)] mb-16 relative group overflow-hidden flex justify-center">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF1E56] to-transparent opacity-50"></div>
-            <video 
-              controls 
-              className="max-h-[70vh] w-auto mx-auto rounded-md object-contain"
-              preload="metadata"
-              poster="https://placehold.co/1920x1080/101622/FF1E56?text=Premere+Play+per+la+Verita"
-            >
-              <source src={videoPath} type="video/mp4" />
-              Il tuo browser non supporta il video.
-            </video>
-            <div className="absolute bottom-0 left-0 w-full p-4 bg-[#1b1f27]/90 border-t border-[#3b4354] backdrop-blur-sm">
-              <p className="text-gray-400 text-sm font-mono flex items-center gap-2 justify-center">
+          {/* VÍDEO CORRIGIDO: Faixa em baixo (sem sobrepor controles) */}
+          <section className="bg-[#101622] border-2 border-[#FF1E56] rounded-lg shadow-[0_0_50px_rgba(255,30,86,0.15)] mb-16 overflow-hidden flex flex-col">
+            <div className="relative w-full bg-black">
+                {/* Efeito de luz superior */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF1E56] to-transparent opacity-50 z-10"></div>
+                
+                <video 
+                  controls 
+                  className="max-h-[70vh] w-full object-contain mx-auto"
+                  preload="metadata"
+                  poster="https://placehold.co/1920x1080/101622/FF1E56?text=Premere+Play+per+la+Verita"
+                >
+                  <source src={videoPath} type="video/mp4" />
+                  Il tuo browser non supporta il video.
+                </video>
+            </div>
+            
+            {/* Faixa de Fonte (Agora estática em baixo, fundo sólido) */}
+            <div className="w-full p-3 bg-[#1b1f27] border-t border-[#3b4354]">
+              <p className="text-gray-400 text-sm font-mono flex items-center justify-center gap-2">
                 <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                 FONTE: Canale Ufficiale Ministro Tajani (Ottobre 2025)
               </p>
@@ -78,7 +93,6 @@ export default function Evidence() {
           {/* Análise de Inteligência */}
           <div className="space-y-16">
             
-            {/* Ponto Crítico: Os Idosos (FONTE AGENZIA NOVA ADICIONADA) */}
             <section className="bg-gradient-to-r from-[#1b1f27] to-[#101622] p-8 border-l-4 border-[#FF1E56] rounded-r-lg">
               <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
                 <span className="text-[#FF1E56]">01.</span> L'Anomalia Demografica
@@ -103,7 +117,6 @@ export default function Evidence() {
               </div>
             </section>
 
-            {/* Comparação Brutal */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Due Pesi, Due Misure</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#3b4354] rounded-lg overflow-hidden shadow-2xl">
