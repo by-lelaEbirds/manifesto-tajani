@@ -2,8 +2,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch, Router } from "wouter"; // Adicionei Router aqui
-import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider } from "./contexts/ThemeContext";
+import ErrorBoundary from "../components/ErrorBoundary";
+import { ThemeProvider } from "../contexts/ThemeContext";
 import Home from "./Home"; // Corrigido: Home está em src/, não em src/pages/
 
 function AppRoutes() {
@@ -23,17 +23,17 @@ function App() {
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   return (
-    <ErrorBoundary>
-      <ThemeProvider defaultTheme="dark">
-        <TooltipProvider>
-          <Toaster />
-          {/* O PULO DO GATO: O Router com base faz o site se encontrar */}
-          <Router base={basePath}>
+    // A correção é envolver o conteúdo principal com o Router e passar o basePath
+    <Router base={basePath}>
+      <ErrorBoundary>
+        <ThemeProvider defaultTheme="dark">
+          <TooltipProvider>
+            <Toaster />
             <AppRoutes />
-          </Router>
-        </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
+          </TooltipProvider>
+        </ThemeProvider>
+      </ErrorBoundary>
+    </Router>
   );
 }
 
