@@ -11,23 +11,23 @@ function AppRoutes() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/404" component={NotFound} />
-      {/* Rota de fallback final */}
+      {/* Rota de fallback final: qualquer coisa não encontrada cai aqui */}
       <Route component={NotFound} />
     </Switch>
   );
 }
 
 function App() {
-  // Pega o caminho base do vite.config.ts (deve ser /manifesto-tajani/)
-  // Se por acaso estiver vazio, usa apenas a barra
-  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "") || "";
+  // Pega o caminho base configurado no vite.config.ts (que é /manifesto-tajani/)
+  // O replace remove a barra final para evitar duplicação
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
-          {/* O segredo está aqui: avisar o Wouter sobre a subpasta */}
+          {/* O PULO DO GATO: O Router com base faz o site se encontrar */}
           <Router base={basePath}>
             <AppRoutes />
           </Router>
