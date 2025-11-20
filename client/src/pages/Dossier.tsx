@@ -12,7 +12,16 @@ export default function Dossier() {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground dark font-sans selection:bg-[#FF1E56] selection:text-white">
-        <nav className="sticky top-0 z-50 w-full bg-black/90 backdrop-blur-md border-b border-[#3b4354]">
+        
+        {/* LINHA DA BANDEIRA ITALIANA */}
+        <div 
+          className="sticky top-0 z-[51] w-full h-1.5"
+          style={{
+            background: "linear-gradient(90deg, #39FF14 0%, #39FF14 33.33%, #ffffff 33.33%, #ffffff 66.66%, #FF1E56 66.66%, #FF1E56 100%)"
+          }}
+        ></div>
+
+        <nav className="sticky top-1.5 z-50 w-full bg-black/90 backdrop-blur-md border-b border-[#3b4354]">
           <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <Link href="/">
               <span className="text-xl font-bold text-white cursor-pointer hover:text-[#39FF14] transition-colors">
@@ -65,7 +74,7 @@ export default function Dossier() {
               </p>
             </section>
 
-            {/* 02. Il Bancomat della Farnesina (COM O VÍDEO NOVO) */}
+            {/* 02. Il Bancomat della Farnesina */}
             <section className="bg-[#1b1f27] border-y border-[#3b4354] py-12 -mx-4 px-4 md:mx-0 md:px-8 md:rounded-xl">
               <h2 className="text-3xl font-bold text-white mb-8">
                 <span className="text-[#00FFFF]">02.</span> Il "Bancomat" della Farnesina
@@ -140,7 +149,7 @@ export default function Dossier() {
               </div>
             </section>
 
-            {/* 03. Sicurezza Nazionale Compromessa (VIDEO IL SOLE 24 ORE) */}
+            {/* 03. Sicurezza Nazionale Compromessa */}
             <section className="relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FF1E56] to-transparent"></div>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
