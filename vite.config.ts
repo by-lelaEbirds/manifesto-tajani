@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   base: '/manifesto-tajani/',
-  plugins: [react()], // Removi o tailwindcss() daqui, pois agora ele roda via PostCSS
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
