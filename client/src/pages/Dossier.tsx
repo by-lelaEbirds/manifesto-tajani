@@ -18,7 +18,8 @@ export default function Dossier() {
             </span>
           </Link>
           <Link href="/">
-            <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-white/10">
+            {/* CORREÇÃO AQUI: Removi o variant="ghost" que causava o erro */}
+            <Button className="text-gray-300 hover:text-white hover:bg-white/10 bg-transparent">
               Torna alla Home
             </Button>
           </Link>
