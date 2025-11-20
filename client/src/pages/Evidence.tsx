@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useEffect } from "react";
 import PageTransition from "@/components/PageTransition";
+import SourceLink from "@/components/SourceLink";
 
 export default function Evidence() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Correção do Caminho do Vídeo para o GitHub Pages
+  // Percorso video
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
   const videoPath = `${basePath}/tajani-video.mp4`;
 
@@ -54,20 +55,20 @@ export default function Evidence() {
             </p>
           </header>
 
-          {/* O Vídeo com Correção de Caminho */}
-          <section className="bg-[#101622] border-2 border-[#FF1E56] p-1 rounded-lg shadow-[0_0_50px_rgba(255,30,86,0.15)] mb-16 relative group overflow-hidden">
+          {/* O Vídeo com Correção de Tamanho (max-h-[70vh]) */}
+          <section className="bg-[#101622] border-2 border-[#FF1E56] p-1 rounded-lg shadow-[0_0_50px_rgba(255,30,86,0.15)] mb-16 relative group overflow-hidden flex justify-center">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF1E56] to-transparent opacity-50"></div>
             <video 
               controls 
-              className="w-full rounded-md"
+              className="max-h-[70vh] w-auto mx-auto rounded-md object-contain"
               preload="metadata"
               poster="https://placehold.co/1920x1080/101622/FF1E56?text=Premere+Play+per+la+Verita"
             >
               <source src={videoPath} type="video/mp4" />
               Il tuo browser non supporta il video.
             </video>
-            <div className="p-4 bg-[#1b1f27] border-t border-[#3b4354]">
-              <p className="text-gray-400 text-sm font-mono flex items-center gap-2">
+            <div className="absolute bottom-0 left-0 w-full p-4 bg-[#1b1f27]/90 border-t border-[#3b4354] backdrop-blur-sm">
+              <p className="text-gray-400 text-sm font-mono flex items-center gap-2 justify-center">
                 <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                 FONTE: Canale Ufficiale Ministro Tajani (Ottobre 2025)
               </p>
@@ -77,13 +78,18 @@ export default function Evidence() {
           {/* Análise de Inteligência */}
           <div className="space-y-16">
             
-            {/* Ponto Crítico: Os Idosos */}
+            {/* Ponto Crítico: Os Idosos (FONTE AGENZIA NOVA ADICIONADA) */}
             <section className="bg-gradient-to-r from-[#1b1f27] to-[#101622] p-8 border-l-4 border-[#FF1E56] rounded-r-lg">
               <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
                 <span className="text-[#FF1E56]">01.</span> L'Anomalia Demografica
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 Osservate attentamente i minuti <strong>0:04</strong> e <strong>0:08</strong>. Il governo parla di "giovani studenti", ma le immagini rivelano <strong>uomini in età avanzata</strong> a bordo di voli umanitari finanziati dalle tasse italiane.
+                <SourceLink 
+                  href="https://www.agenzianova.com/news/gaza-proseguono-i-corridoi-universitari-arrivati-in-italia-49-studenti-con-borse-di-studio-video/" 
+                  label="Video Agenzia Nova" 
+                  sourceName="Agenzia Nova - Arrivo Studenti" 
+                />
               </p>
               <div className="bg-black/40 p-6 rounded border border-red-900/50 backdrop-blur-sm">
                 <h3 className="text-[#FF1E56] font-bold text-xl mb-2 uppercase tracking-wide">Contraddizione Logica</h3>
@@ -145,26 +151,12 @@ export default function Evidence() {
               </div>
             </section>
 
-            <section className="prose prose-invert max-w-none bg-[#1b1f27] p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">Guerra dell'Informazione: Smontare la Leggenda</h3>
-              <p className="text-gray-300 text-lg">
-                Antonio Tajani sta usando una tattica nota come <strong>"Costruzione della Leggenda"</strong>. Crea una facciata di efficienza umanitaria per coprire il fallimento sistemico del controllo delle frontiere.
-              </p>
-              <p className="text-gray-300 text-lg mt-4">
-                Mentre abbraccia favorevolmente persone culturalmente distanti dall'Italia, pugnala alle spalle coloro che portano cognomi italiani, pregano nelle stesse chiese e condividono la stessa storia. È un tradimento perpetrato con il sorriso istituzionale.
-              </p>
-            </section>
-            
             <section className="text-center pt-12 pb-8">
               <Link href="/dossier">
                 <Button className="bg-[#39FF14] text-black font-black text-xl h-16 px-10 hover:bg-[#39FF14]/80 rounded-none skew-x-[-10deg] hover:skew-x-0 transition-transform shadow-[0_0_20px_rgba(57,255,20,0.4)]">
                   LEGGI IL DOSSIER COMPLETO
                 </Button>
               </Link>
-              <p className="mt-6 text-gray-500 text-sm">
-                Disclaimer: Questo sito è un'iniziativa civile indipendente. Nessuna affiliazione politica.
-                <br/>Nata dalla profonda delusione verso le politiche del Vicepremier Tajani.
-              </p>
             </section>
           </div>
         </main>
