@@ -1,6 +1,9 @@
+// client/src/pages/Home.tsx
+
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import PageTransition from "@/components/PageTransition";
+import SourceLink from "@/components/SourceLink"; // Importe o novo componente
 
 export default function Home() {
   const scrollToSection = (id: string) => {
@@ -10,13 +13,15 @@ export default function Home() {
     }
   };
 
+  // URL DO ABAIXO ASSINADO
+  const PETITION_URL = "https://www.change.org/p/ripudio-al-d-l-tajani-28-03-25";
+
   return (
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground dark">
-        {/* ... (MANTENHA TODO O CONTEÚDO ANTERIOR DA HOME AQUI) ... */}
-        {/* ... Copie exatamente o que te mandei no passo anterior, só envolva com <PageTransition> ... */}
+        
+        {/* HEADER (Mantido igual) */}
         <div className="sticky top-0 z-50 w-full">
-            {/* ... header ... */}
             <div className="h-1 bg-[#39FF14]"></div>
             <nav className="bg-black/50 backdrop-blur-sm border-b border-[#3b4354]">
             <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -35,6 +40,7 @@ export default function Home() {
         </div>
 
         <main className="w-full">
+            {/* HERO SECTION */}
             <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "linear-gradient(135deg, rgba(16, 22, 34, 0.85) 0%, rgba(16, 22, 34, 0.95) 100%)", backgroundColor: "#101622"}}></div>
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
@@ -66,18 +72,31 @@ export default function Home() {
             </div>
             </section>
 
+            {/* INTRO SECTION */}
             <section className="py-16 px-4 bg-black/30">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">La Minaccia Imminente</h2>
                 <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                Il Decreto-Legge n. 36/2025, convertito nella Legge n. 74/2025 (il Decreto Tajani), rappresenta una rottura fondamentale con il principio storico del Jus Sanguinis italiano.
+                Il Decreto-Legge n. 36/2025 (il Decreto Tajani)
+                <SourceLink 
+                  href="https://temi.camera.it/leg19/provvedimento/d-l-36-2025-disposizioni-urgenti-in-materia-di-cittadinanza.html" 
+                  label="D.L. 36/2025" 
+                  sourceName="Camera dei Deputati" 
+                />
+                rappresenta una rottura fondamentale con il principio storico del Jus Sanguinis italiano.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                Questo decreto attacca direttamente il diritto di sangue, negando la cittadinanza a milioni di discendenti di italiani e violando frontalmente gli Articoli 3, 22 e 35 della Costituzione della Repubblica Italiana.
+                Questo decreto attacca direttamente il diritto di sangue, negando la cittadinanza a milioni di discendenti di italiani e violando frontalmente gli Articoli 3, 22 e 35 della Costituzione della Repubblica Italiana
+                <SourceLink 
+                  href="https://www.senato.it/istituzione/la-costituzione" 
+                  label="Costituzione" 
+                  sourceName="Senato della Repubblica" 
+                />.
                 </p>
             </div>
             </section>
 
+            {/* AS 4 ARMAS (Mantido, sem necessidade crítica de fontes externas aqui pois é análise) */}
             <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Le Quattro Armi della Distruzione</h2>
@@ -142,6 +161,7 @@ export default function Home() {
             </div>
             </section>
 
+            {/* MANIFESTO TEXTO */}
             <section id="manifesto" className="py-16 px-4">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Il Manifesto Completo</h2>
@@ -168,6 +188,7 @@ export default function Home() {
             </div>
             </section>
 
+            {/* DEMANDS */}
             <section id="demands" className="py-16 px-4 bg-black/30">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Le Nostre Esigenze Non Negoziabili</h2>
@@ -176,6 +197,7 @@ export default function Home() {
                     <h3 className="text-2xl font-bold text-white mb-2">Ritiro Immediato</h3>
                     <p className="text-gray-300">Esigiamo il ritiro immediato e completo del Decreto-Legge n. 36/2025 e della Legge n. 74/2025. Questa legislazione deve essere abrogata nella sua totalità.</p>
                 </div>
+                {/* Outros cards mantidos */}
                 <div className="border-l-4 border-[#39FF14] bg-[#39FF14]/10 p-6 rounded-r-sm">
                     <h3 className="text-2xl font-bold text-white mb-2">Protezione Costituzionale</h3>
                     <p className="text-gray-300">Esigiamo la reaffermazione del diritto Jus Sanguinis senza limiti generazionali, conforme alla Costituzione Italiana. Il diritto di sangue non ha scadenza.</p>
@@ -192,6 +214,7 @@ export default function Home() {
             </div>
             </section>
 
+            {/* FOOTER COM O LINK DO CHANGE.ORG */}
             <section className="py-20 px-4 bg-black/50 border-t border-[#3b4354]">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
@@ -201,9 +224,18 @@ export default function Home() {
                 La tua voce è cruciale. Condividi questo manifesto, sostieni la causa e seguici per rimanere informato. La lotta per la nostra eredità è adesso.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-[#FF1E56] text-white font-bold text-lg h-12 px-8 hover:bg-opacity-80 transition-all rounded-sm">
-                    Sostieni la Causa
-                </Button>
+                
+                {/* LINK ATUALIZADO AQUI */}
+                <a 
+                    href={PETITION_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Button className="bg-[#FF1E56] text-white font-bold text-lg h-12 px-8 hover:bg-opacity-80 transition-all rounded-sm w-full sm:w-auto">
+                        Sostieni la Causa
+                    </Button>
+                </a>
+
                 <Button className="bg-[#282e39] text-white font-bold text-lg h-12 px-8 hover:bg-opacity-80 transition-all rounded-sm border border-[#3b4354]">
                     Condividi il Manifesto
                 </Button>
