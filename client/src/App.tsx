@@ -2,9 +2,9 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch, Router } from "wouter";
-import ErrorBoundary from "./components/ErrorBoundary"; // CORRIGIDO: ./ em vez de ../
-import { ThemeProvider } from "./contexts/ThemeContext"; // CORRIGIDO: ./ em vez de ../
-import Home from "./Home"; 
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import Home from "./pages/Home"; // <--- CORREÇÃO AQUI: Aponta para a pasta pages
 
 function AppRoutes() {
   return (
@@ -18,16 +18,16 @@ function AppRoutes() {
 }
 
 function App() {
-  // Pega o caminho base configurado no vite.config.ts (que é /manifesto-tajani/)
-  // O replace remove a barra final para evitar duplicação
-  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+  // Pega o caminho base configurado no vite.config.ts
+  // Garante que não seja undefined e remove barra final extra
+  const basePath = (import.meta.env.BASE_URL || "").replace(/\/$/, "");
 
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
-          {/* O Router precisa envolver as rotas para aplicar a base corretamente */}
+          {/* Router configurado com a base correta para o GitHub Pages */}
           <Router base={basePath}>
             <AppRoutes />
           </Router>
