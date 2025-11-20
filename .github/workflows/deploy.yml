@@ -37,6 +37,10 @@ jobs:
       - name: Build Project
         run: pnpm build
 
+      # ESTE É O PASSO MÁGICO PARA CORRIGIR O 404
+      - name: Create .nojekyll to prevent GitHub Pages 404
+        run: touch dist/.nojekyll
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
