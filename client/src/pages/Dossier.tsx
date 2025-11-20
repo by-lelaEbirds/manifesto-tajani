@@ -51,7 +51,7 @@ export default function Dossier() {
 
           <div className="space-y-20 text-gray-300 leading-relaxed text-lg">
             
-            {/* Introduzione Agressiva */}
+            {/* 01. Introduzione Agressiva */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
                 <span className="text-[#39FF14] text-6xl font-black opacity-50">01</span>
@@ -60,9 +60,12 @@ export default function Dossier() {
               <p className="mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-white first-letter:float-left first-letter:mr-3">
                 L'Italia si trova a un bivio esistenziale. Stretta tra un inverno demografico senza precedenti e una pressione migratoria strutturale, la leadership di Antonio Tajani ha operato una scelta di campo netta, crudele e non dichiarata: <strong>il sangue antico non basta più.</strong>
               </p>
+              <p>
+                In questo nuovo modello di "Nazione S.p.A.", il cittadino non è più chi condivide la storia e l'anima della nazione, ma chi è "funzionale" al mercato. I figli della diaspora, che hanno costruito nazioni come il Brasile e l'Argentina, sono stati declassati da "fratelli" a "passività di bilancio".
+              </p>
             </section>
 
-            {/* A Mentira Econômica */}
+            {/* 02. Il Bancomat della Farnesina (COM O VÍDEO NOVO) */}
             <section className="bg-[#1b1f27] border-y border-[#3b4354] py-12 -mx-4 px-4 md:mx-0 md:px-8 md:rounded-xl">
               <h2 className="text-3xl font-bold text-white mb-8">
                 <span className="text-[#00FFFF]">02.</span> Il "Bancomat" della Farnesina
@@ -71,6 +74,45 @@ export default function Dossier() {
                 Mentre i nostri consolati in Sud America crollano per mancanza di fondi, Tajani ha trasformato il Ministero degli Esteri in un ente pagatore per regimi instabili.
                 La strategia è chiara: <strong>finanziare l'esterno per bloccare l'interno.</strong>
               </p>
+              
+              {/* VIDEO TUNISIA (Agenzia Vista) INTEGRATO */}
+              <div className="mb-12 bg-black/40 border border-[#00FFFF]/30 rounded-lg overflow-hidden shadow-lg">
+                <div className="bg-[#00FFFF]/10 px-4 py-2 border-b border-[#00FFFF]/30 flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-[#00FFFF] animate-pulse"></div>
+                        <span className="text-[#00FFFF] text-xs font-mono tracking-widest uppercase">Archivio Video: Agenzia Vista</span>
+                    </div>
+                    <span className="text-[10px] text-gray-500 font-mono">PROTOCOLLO TUNISIA</span>
+                </div>
+                <div className="grid md:grid-cols-2 gap-0">
+                    <div className="aspect-video w-full bg-black relative">
+                        <iframe 
+                            className="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/iZEwm9acihU" 
+                            title="Tajani su Accordo Tunisia" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                    <div className="p-6 flex flex-col justify-center bg-[#101622] border-t md:border-t-0 md:border-l border-gray-800">
+                        <blockquote className="text-white text-sm italic mb-4 border-l-2 border-[#00FFFF] pl-4">
+                            "Il memorandum... non riguarda solo la gestione dei flussi migratori, è un investimento nella stabilità e nella prosperità condivisa a beneficio delle future generazioni."
+                        </blockquote>
+                        <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-800">
+                            <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-xs text-white font-bold">AT</div>
+                            <div>
+                                <p className="text-xs text-white font-bold">Antonio Tajani</p>
+                                <p className="text-[10px] text-gray-400">Question Time alla Camera</p>
+                            </div>
+                        </div>
+                         <p className="text-[10px] text-[#FF1E56] mt-4 font-mono bg-[#FF1E56]/10 p-2 rounded">
+                            <strong>ANALISI:</strong> La "stabilità" citata si traduce nel finanziamento di guardie costiere accusate di abbandonare migranti nel deserto, mentre i fondi per la "prosperità condivisa" vengono negati ai consolati italiani in Sud America.
+                        </p>
+                    </div>
+                </div>
+              </div>
+
               <div className="grid md:grid-cols-2 gap-8 my-8">
                 <div className="bg-black/40 p-6 rounded border border-red-500/30 relative overflow-hidden">
                    <div className="absolute top-0 right-0 p-1 bg-red-500/20 text-[10px] text-red-500 font-bold">DATI UFFICIALI</div>
@@ -98,7 +140,7 @@ export default function Dossier() {
               </div>
             </section>
 
-            {/* Sicurezza Nazionale Compromessa (CON VIDEO IL SOLE 24 ORE) */}
+            {/* 03. Sicurezza Nazionale Compromessa (VIDEO IL SOLE 24 ORE) */}
             <section className="relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FF1E56] to-transparent"></div>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
@@ -119,7 +161,7 @@ export default function Dossier() {
                   />
                 </p>
                 
-                {/* VIDEO PROVA INTEGRADO (IL SOLE 24 ORE / MELONI) */}
+                {/* VIDEO PROVA INTEGRATO (IL SOLE 24 ORE / MELONI) */}
                 <div className="mt-6 bg-black/60 p-4 rounded border border-gray-800">
                    <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Video Testimonianza (Fonte: Il Sole 24 Ore)</p>
                    <div className="flex flex-col md:flex-row gap-4 items-center">
@@ -143,7 +185,7 @@ export default function Dossier() {
               </div>
             </section>
 
-            {/* O Ataque do Ius Italiae */}
+            {/* 04. O Ataque do Ius Italiae */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
                 <span className="text-white text-6xl font-black opacity-20">04</span>
@@ -174,7 +216,7 @@ export default function Dossier() {
               </div>
             </section>
 
-             {/* Ius Scholae e Dati Demografici (LINK ISMU CORRETTO) */}
+             {/* 05. Ius Scholae e Dati Demografici */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">05. Il Cavallo di Troia: "Ius Scholae"</h2>
               <p className="mb-4">
