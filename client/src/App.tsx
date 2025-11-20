@@ -1,17 +1,17 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, Router } from "wouter"; // Adicionei Router aqui
-import ErrorBoundary from "../components/ErrorBoundary";
-import { ThemeProvider } from "../contexts/ThemeContext";
-import Home from "./Home"; // Corrigido: Home está em src/, não em src/pages/
+import { Route, Switch, Router } from "wouter";
+import ErrorBoundary from "./components/ErrorBoundary"; // CORRIGIDO: ./ em vez de ../
+import { ThemeProvider } from "./contexts/ThemeContext"; // CORRIGIDO: ./ em vez de ../
+import Home from "./Home"; 
 
 function AppRoutes() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/404" component={NotFound} />
-      {/* Rota de fallback final: qualquer coisa não encontrada cai aqui */}
+      {/* Rota de fallback final */}
       <Route component={NotFound} />
     </Switch>
   );
@@ -23,17 +23,17 @@ function App() {
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   return (
-    // A correção é envolver o conteúdo principal com o Router e passar o basePath
-    <Router base={basePath}>
-      <ErrorBoundary>
-        <ThemeProvider defaultTheme="dark">
-          <TooltipProvider>
-            <Toaster />
+    <ErrorBoundary>
+      <ThemeProvider defaultTheme="dark">
+        <TooltipProvider>
+          <Toaster />
+          {/* O Router precisa envolver as rotas para aplicar a base corretamente */}
+          <Router base={basePath}>
             <AppRoutes />
-          </TooltipProvider>
-        </ThemeProvider>
-      </ErrorBoundary>
-    </Router>
+          </Router>
+        </TooltipProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 
