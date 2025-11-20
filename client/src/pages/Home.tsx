@@ -1,9 +1,7 @@
-// client/src/pages/Home.tsx
-
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import PageTransition from "@/components/PageTransition";
-import SourceLink from "@/components/SourceLink"; // Importe o novo componente
+import SourceLink from "@/components/SourceLink";
 
 export default function Home() {
   const scrollToSection = (id: string) => {
@@ -20,7 +18,7 @@ export default function Home() {
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground dark">
         
-        {/* HEADER (Mantido igual) */}
+        {/* HEADER */}
         <div className="sticky top-0 z-50 w-full">
             <div className="h-1 bg-[#39FF14]"></div>
             <nav className="bg-black/50 backdrop-blur-sm border-b border-[#3b4354]">
@@ -96,7 +94,7 @@ export default function Home() {
             </div>
             </section>
 
-            {/* AS 4 ARMAS (Mantido, sem necessidade crítica de fontes externas aqui pois é análise) */}
+            {/* AS 4 ARMAS */}
             <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Le Quattro Armi della Distruzione</h2>
@@ -161,14 +159,13 @@ export default function Home() {
             </div>
             </section>
 
-            {/* MANIFESTO TEXTO */}
             <section id="manifesto" className="py-16 px-4">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Il Manifesto Completo</h2>
                 <div className="bg-[#1b1f27] border border-[#3b4354] p-8 rounded-sm space-y-6 text-gray-300 leading-relaxed">
                 <div>
                     <h3 className="text-2xl font-bold text-white mb-4">Preambolo</h3>
-                    <p>Noi, cittadini italiani per diritto di sangue (Jus Sanguinis), discendenti di coloro che l'Italia ha esportato nel mondo, dichiariamo solennemente che il Decreto-Legge n. 36/2025 è profondamente incostituzionale e rappresenta un tradimento dei principi fondamentali della Repubblica Italiana.</p>
+                    <p>Noi, cittadini italiani per diritto di sangue (Jus Sanguinis), discendenti di coloro che l'Italia ha esportato nel mondo, dichiariamo solennemente che il Decreto-Legge n. 36/2025 è profondamente incostituzionale e representa un tradimento dei principi fondamentali della Repubblica Italiana.</p>
                 </div>
                 <div>
                     <h3 className="text-2xl font-bold text-white mb-4">I. Il Fondamento Perpetuo</h3>
@@ -188,7 +185,6 @@ export default function Home() {
             </div>
             </section>
 
-            {/* DEMANDS */}
             <section id="demands" className="py-16 px-4 bg-black/30">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Le Nostre Esigenze Non Negoziabili</h2>
@@ -197,7 +193,6 @@ export default function Home() {
                     <h3 className="text-2xl font-bold text-white mb-2">Ritiro Immediato</h3>
                     <p className="text-gray-300">Esigiamo il ritiro immediato e completo del Decreto-Legge n. 36/2025 e della Legge n. 74/2025. Questa legislazione deve essere abrogata nella sua totalità.</p>
                 </div>
-                {/* Outros cards mantidos */}
                 <div className="border-l-4 border-[#39FF14] bg-[#39FF14]/10 p-6 rounded-r-sm">
                     <h3 className="text-2xl font-bold text-white mb-2">Protezione Costituzionale</h3>
                     <p className="text-gray-300">Esigiamo la reaffermazione del diritto Jus Sanguinis senza limiti generazionali, conforme alla Costituzione Italiana. Il diritto di sangue non ha scadenza.</p>
@@ -214,7 +209,6 @@ export default function Home() {
             </div>
             </section>
 
-            {/* FOOTER COM O LINK DO CHANGE.ORG */}
             <section className="py-20 px-4 bg-black/50 border-t border-[#3b4354]">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
@@ -224,21 +218,15 @@ export default function Home() {
                 La tua voce è cruciale. Condividi questo manifesto, sostieni la causa e seguici per rimanere informato. La lotta per la nostra eredità è adesso.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                
-                {/* LINK ATUALIZADO AQUI */}
                 <a 
                     href={PETITION_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Button className="bg-[#FF1E56] text-white font-bold text-lg h-12 px-8 hover:bg-opacity-80 transition-all rounded-sm w-full sm:w-auto">
+                    <Button className="bg-[#FF1E56] text-white font-bold text-lg h-12 px-8 hover:bg-opacity-80 transition-all rounded-sm w-full sm:w-auto shadow-[0_0_20px_rgba(255,30,86,0.5)]">
                         Sostieni la Causa
                     </Button>
                 </a>
-
-                <Button className="bg-[#282e39] text-white font-bold text-lg h-12 px-8 hover:bg-opacity-80 transition-all rounded-sm border border-[#3b4354]">
-                    Condividi il Manifesto
-                </Button>
                 </div>
                 <div className="mt-8 pt-8 border-t border-gray-800 text-gray-500 text-xs">
                     <p>Non affiliato a partiti politici. Iniziativa civile indipendente.</p>
