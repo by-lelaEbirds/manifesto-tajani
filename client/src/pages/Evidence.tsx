@@ -1,148 +1,174 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useEffect } from "react";
+import PageTransition from "@/components/PageTransition";
 
 export default function Evidence() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Correção do Caminho do Vídeo para o GitHub Pages
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const videoPath = `${basePath}/tajani-video.mp4`;
+
   return (
-    <div className="min-h-screen bg-background text-foreground dark">
-      <nav className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-sm border-b border-[#3b4354]">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/">
-            <span className="text-xl font-bold text-white cursor-pointer hover:text-[#39FF14] transition-colors">
-              Manifesto Tajani
-            </span>
-          </Link>
-          <div className="flex gap-4">
-            <Link href="/dossier">
-              <Button className="border border-[#00FFFF] text-[#00FFFF] bg-transparent hover:bg-[#00FFFF]/10">
-                Analisi Dati
-              </Button>
-            </Link>
+    <PageTransition>
+      <div className="min-h-screen bg-background text-foreground dark font-sans">
+        <nav className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-[#3b4354]">
+          <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <Link href="/">
-              <Button className="text-gray-300 hover:text-white bg-transparent">
-                Torna alla Home
-              </Button>
+              <span className="text-xl font-bold text-white cursor-pointer hover:text-[#39FF14] transition-colors tracking-tight">
+                Manifesto Tajani
+              </span>
             </Link>
+            <div className="flex gap-4">
+              <Link href="/dossier">
+                <Button className="border border-[#00FFFF] text-[#00FFFF] bg-transparent hover:bg-[#00FFFF]/10 transition-all duration-300">
+                  Analisi Dati
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button className="text-gray-300 hover:text-white bg-transparent hover:bg-white/5">
+                  Torna alla Home
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      <main className="w-full max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-12 text-center">
-          <span className="text-[#FF1E56] font-mono text-sm tracking-widest uppercase mb-2 block animate-pulse">
-            🔴 Analisi Forense del Video
-          </span>
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6">
-            La Narrazione <br />
-            <span className="text-[#FF1E56]">vs. La Realtà</span>
-          </h1>
-          <p className="text-xl text-gray-300">
-            Tajani parla di "giovani studenti". Le immagini mostrano un'altra verità.
-          </p>
-        </header>
-
-        {/* O Vídeo */}
-        <section className="bg-[#1b1f27] border-2 border-[#FF1E56] p-1 rounded-sm shadow-[0_0_50px_rgba(255,30,86,0.3)] mb-12 relative">
-          <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider animate-pulse">
-            Prova Video
-          </div>
-          <video 
-            controls 
-            className="w-full rounded-sm"
-            poster="https://placehold.co/1920x1080/101622/FF1E56?text=Video+Tajani:+L'Inganno+Visivo"
-          >
-            <source src="/tajani-video.mp4" type="video/mp4" />
-            Il tuo browser non supporta il video.
-          </video>
-        </section>
-
-        {/* Análise de Inteligência (Warfare Info) */}
-        <div className="space-y-12">
-          
-          {/* Ponto Crítico: Os Idosos */}
-          <section className="bg-[#1b1f27] p-8 border-l-4 border-[#FF1E56]">
-            <h2 className="text-3xl font-bold text-white mb-4">L'Anomalia Demografica</h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Al minuto <strong>0:04</strong> e <strong>0:08</strong>, osserviamo chiaramente uomini anziani a bordo del volo "umanitario". 
+        <main className="w-full max-w-5xl mx-auto px-4 py-12">
+          <header className="mb-12 text-center">
+            <div className="inline-block bg-red-500/10 border border-red-500/50 px-4 py-1 rounded-full mb-4">
+              <span className="text-[#FF1E56] font-mono text-xs font-bold tracking-widest uppercase animate-pulse">
+                ⚠️ Prova Forense Acquisita
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-none">
+              La Narrazione <br />
+              <span className="text-[#FF1E56] text-shadow-glow">vs. La Realtà</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Mentre i nostri consolati chiudono, i corridoi aerei si aprono.
+              <br/>Guarda con i tuoi occhi il doppio standard del Vicepremier.
             </p>
-            <div className="bg-black/50 p-6 rounded border border-gray-700">
-              <h3 className="text-[#FF1E56] font-bold text-xl mb-2">La Contraddizione Logica</h3>
-              <p className="text-gray-300 italic">
-                "L'obiettivo è formare la futura classe dirigente..." — Antonio Tajani
-              </p>
-              <hr className="border-gray-700 my-4"/>
-              <p className="text-white font-medium">
-                Analisi: Se l'Italia soffre di un "inverno demografico" e ha bisogno di giovani, perché i corridoi universitari vengono utilizzati per trasportare uomini in età avanzata? 
-                Questa non è una missione accademica. È un'operazione di ricollocamento demografico mascherata da umanitarismo.
+          </header>
+
+          {/* O Vídeo com Correção de Caminho */}
+          <section className="bg-[#101622] border-2 border-[#FF1E56] p-1 rounded-lg shadow-[0_0_50px_rgba(255,30,86,0.15)] mb-16 relative group overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF1E56] to-transparent opacity-50"></div>
+            <video 
+              controls 
+              className="w-full rounded-md"
+              preload="metadata"
+              poster="https://placehold.co/1920x1080/101622/FF1E56?text=Premere+Play+per+la+Verita"
+            >
+              <source src={videoPath} type="video/mp4" />
+              Il tuo browser non supporta il video.
+            </video>
+            <div className="p-4 bg-[#1b1f27] border-t border-[#3b4354]">
+              <p className="text-gray-400 text-sm font-mono flex items-center gap-2">
+                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                FONTE: Canale Ufficiale Ministro Tajani (Ottobre 2025)
               </p>
             </div>
           </section>
 
-          {/* Comparação Brutal */}
-          <section>
-            <h2 className="text-3xl font-bold text-white mb-8">Due Pesi, Due Misure</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#3b4354]">
-              <div className="bg-[#101622] p-8 border-b md:border-b-0 md:border-r border-[#3b4354]">
-                <h3 className="text-[#39FF14] font-black text-2xl mb-4 uppercase">Il Trattamento Gaza</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#39FF14]">✓</span> Voli di Stato pagati dai contribuenti.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#39FF14]">✓</span> Accoglienza personale del Vicepremier.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#39FF14]">✓</span> Accesso immediato a 22 Università.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#39FF14]">✓</span> Nessun requisito di sangue o lingua pregressa.
-                  </li>
-                </ul>
+          {/* Análise de Inteligência */}
+          <div className="space-y-16">
+            
+            {/* Ponto Crítico: Os Idosos */}
+            <section className="bg-gradient-to-r from-[#1b1f27] to-[#101622] p-8 border-l-4 border-[#FF1E56] rounded-r-lg">
+              <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
+                <span className="text-[#FF1E56]">01.</span> L'Anomalia Demografica
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                Osservate attentamente i minuti <strong>0:04</strong> e <strong>0:08</strong>. Il governo parla di "giovani studenti", ma le immagini rivelano <strong>uomini in età avanzata</strong> a bordo di voli umanitari finanziati dalle tasse italiane.
+              </p>
+              <div className="bg-black/40 p-6 rounded border border-red-900/50 backdrop-blur-sm">
+                <h3 className="text-[#FF1E56] font-bold text-xl mb-2 uppercase tracking-wide">Contraddizione Logica</h3>
+                <p className="text-gray-300 italic mb-4 text-lg">
+                  "L'obiettivo è formare la futura classe dirigente..." — Antonio Tajani
+                </p>
+                <p className="text-white font-medium border-t border-gray-700 pt-4">
+                  <strong>Analisi Tattica:</strong> Se l'Italia soffre di un "inverno demografico", perché importiamo uomini anziani mentre espelliamo burocraticamente i giovani discendenti sudamericani? 
+                  Questa non è accoglienza. È <strong>sostituzione demografica</strong> mascherata da umanitarismo.
+                </p>
               </div>
-              <div className="bg-[#101622] p-8 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[#FF1E56]/5 pointer-events-none"></div>
-                <h3 className="text-[#FF1E56] font-black text-2xl mb-4 uppercase">Il Trattamento Diaspora</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#FF1E56]">✗</span> 10 anni di attesa nei consolati.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#FF1E56]">✗</span> Definiti "Turisti del Passaporto".
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#FF1E56]">✗</span> Tasse raddoppiate (€600).
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#FF1E56]">✗</span> Minaccia di cancellazione dei diritti.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section className="prose prose-invert max-w-none">
-            <h3 className="text-2xl font-bold text-white mb-4">La Strategia della Sostituzione</h3>
-            <p className="text-gray-300">
-              Utilizzando le tattiche descritte nella <em>Guerra dell'Informazione</em>, Tajani sta costruendo una "Leggenda" (una storia di copertura): quella dell'aiuto umanitario. Ma i dati rivelano l'intento strategico.
-            </p>
-            <p className="text-gray-300">
-              Mentre si importano persone culturalmente distanti (e demograficamente non sempre attive, come mostrano gli anziani nel video), si espelle attivamente chi ha il sangue italiano. È un tradimento storico perpetrato con il sorriso istituzionale.
-            </p>
-          </section>
-          
-          <section className="text-center pt-8">
-            <Link href="/dossier">
-              <Button className="bg-[#39FF14] text-black font-bold text-lg h-14 px-8 hover:bg-[#39FF14]/80 rounded-sm w-full md:w-auto">
-                Leggi il Dossier: Le Prove Documentali
-              </Button>
-            </Link>
-          </section>
-        </div>
-      </main>
-    </div>
+            {/* Comparação Brutal */}
+            <section>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Due Pesi, Due Misure</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#3b4354] rounded-lg overflow-hidden shadow-2xl">
+                <div className="bg-[#101622] p-8 border-b md:border-b-0 md:border-r border-[#3b4354] hover:bg-[#151b29] transition-colors">
+                  <div className="flex items-center gap-3 mb-6">
+                     <span className="text-3xl">✈️</span>
+                     <h3 className="text-[#39FF14] font-black text-2xl uppercase tracking-wide">Il Privilegio Gaza</h3>
+                  </div>
+                  <ul className="space-y-4 text-gray-300 font-medium">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#39FF14] font-bold">✓</span> Voli di Stato gratuiti (pagati da noi).
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#39FF14] font-bold">✓</span> Accoglienza personale del Ministro.
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#39FF14] font-bold">✓</span> Accesso diretto a 22 Università.
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#39FF14] font-bold">✓</span> Nessun requisito di lingua o sangue.
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-[#101622] p-8 relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-red-900/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                  <div className="flex items-center gap-3 mb-6">
+                     <span className="text-3xl">🚫</span>
+                     <h3 className="text-[#FF1E56] font-black text-2xl uppercase tracking-wide">La Punizione Diaspora</h3>
+                  </div>
+                  <ul className="space-y-4 text-gray-300 font-medium">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#FF1E56] font-bold">✗</span> 12 anni di attesa per un timbro.
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#FF1E56] font-bold">✗</span> Insultati come "Turisti".
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#FF1E56] font-bold">✗</span> Tasse raddoppiate a €600.
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#FF1E56] font-bold">✗</span> Minaccia di cancellazione dei diritti.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section className="prose prose-invert max-w-none bg-[#1b1f27] p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-white mb-4">Guerra dell'Informazione: Smontare la Leggenda</h3>
+              <p className="text-gray-300 text-lg">
+                Antonio Tajani sta usando una tattica nota come <strong>"Costruzione della Leggenda"</strong>. Crea una facciata di efficienza umanitaria per coprire il fallimento sistemico del controllo delle frontiere.
+              </p>
+              <p className="text-gray-300 text-lg mt-4">
+                Mentre abbraccia favorevolmente persone culturalmente distanti dall'Italia, pugnala alle spalle coloro che portano cognomi italiani, pregano nelle stesse chiese e condividono la stessa storia. È un tradimento perpetrato con il sorriso istituzionale.
+              </p>
+            </section>
+            
+            <section className="text-center pt-12 pb-8">
+              <Link href="/dossier">
+                <Button className="bg-[#39FF14] text-black font-black text-xl h-16 px-10 hover:bg-[#39FF14]/80 rounded-none skew-x-[-10deg] hover:skew-x-0 transition-transform shadow-[0_0_20px_rgba(57,255,20,0.4)]">
+                  LEGGI IL DOSSIER COMPLETO
+                </Button>
+              </Link>
+              <p className="mt-6 text-gray-500 text-sm">
+                Disclaimer: Questo sito è un'iniziativa civile indipendente. Nessuna affiliazione politica.
+                <br/>Nata dalla profonda delusione verso le politiche del Vicepremier Tajani.
+              </p>
+            </section>
+          </div>
+        </main>
+      </div>
+    </PageTransition>
   );
 }
