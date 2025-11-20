@@ -1,7 +1,10 @@
+// client/src/pages/Dossier.tsx
+
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useEffect } from "react";
 import PageTransition from "@/components/PageTransition";
+import SourceLink from "@/components/SourceLink"; // Importe o novo componente
 
 export default function Dossier() {
   useEffect(() => {
@@ -50,7 +53,7 @@ export default function Dossier() {
 
           <div className="space-y-20 text-gray-300 leading-relaxed text-lg">
             
-            {/* Introduzione Agressiva */}
+            {/* Introduzione */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
                 <span className="text-[#39FF14] text-6xl font-black opacity-50">01</span>
@@ -64,22 +67,41 @@ export default function Dossier() {
               </p>
             </section>
 
-            {/* A Mentira Econômica */}
+            {/* A Mentira Econômica (FONTES INSERIDAS AQUI) */}
             <section className="bg-[#1b1f27] border-y border-[#3b4354] py-12 -mx-4 px-4 md:mx-0 md:px-8 md:rounded-xl">
               <h2 className="text-3xl font-bold text-white mb-8">
                 <span className="text-[#00FFFF]">02.</span> La Menzogna Economica
               </h2>
               <p className="mb-6">
-                La giustificazione ufficiale per aprire le porte all'immigrazione non-etnica è sempre economica. "Ce lo chiede il mercato", dicono. I dati indicano che i migranti contribuiscono per <strong>154 miliardi di euro al PIL</strong>. Ma questa è solo metà della storia.
+                La giustificazione ufficiale per aprire le porte all'immigrazione non-etnica è sempre economica. "Ce lo chiede il mercato", dicono. I dati indicano che i migranti contribuiscono per 
+                <strong className="text-white ml-1">154 miliardi di euro al PIL</strong>
+                <SourceLink 
+                    href="https://www.cinformi.it/Comunicazione/Notizie/Migranti-in-Italia-154-miliardi-di-PIL-9-del-totale" 
+                    label="Rif. Cinformi" 
+                    sourceName="Cinformi / Fondazione Moressa" 
+                />
+                . Ma questa è solo metà della storia.
               </p>
               <div className="grid md:grid-cols-2 gap-8 my-8">
                 <div className="bg-black/40 p-6 rounded border border-red-500/30">
                    <h4 className="text-[#FF1E56] font-bold mb-2 text-xl">Costo Reale: €1,7 Miliardi</h4>
-                   <p className="text-sm">Il Ministro Piantedosi ha ammesso che l'Italia spende 1,7 miliardi di euro l'anno solo per il sistema di accoglienza (hotspot, CAS) di migranti spesso irregolari.</p>
+                   <p className="text-sm">Il Ministro Piantedosi ha ammesso che l'Italia spende 1,7 miliardi di euro l'anno solo per il sistema di accoglienza (hotspot, CAS).
+                   <SourceLink 
+                     href="https://italianismo.com.br/it/italia-gasta-17-bi-de-euros-por-ano-com-acolhimento-de-imigrantes-diz-ministro/" 
+                     label="Dichiarazione Ministro" 
+                     sourceName="Min. Interno / Italianismo" 
+                   />
+                   </p>
                 </div>
                 <div className="bg-black/40 p-6 rounded border border-[#39FF14]/30">
                    <h4 className="text-[#39FF14] font-bold mb-2 text-xl">Tassa Raddoppiata: €600</h4>
-                   <p className="text-sm">Mentre sovvenzioniamo l'accoglienza straniera, Tajani vuole raddoppiare la tassa di cittadinanza per i discendenti. <strong>Lo straniero viene pagato, il fratello viene tassato.</strong></p>
+                   <p className="text-sm">Mentre sovvenzioniamo l'accoglienza straniera, Tajani vuole raddoppiare la tassa di cittadinanza per i discendenti. 
+                   <SourceLink 
+                     href="https://temi.camera.it/leg19/provvedimento/d-l-36-2025-disposizioni-urgenti-in-materia-di-cittadinanza.html" 
+                     label="D.L. 36/2025" 
+                     sourceName="Camera dei Deputati" 
+                   />
+                   <strong>Lo straniero viene pagato, il fratello viene tassato.</strong></p>
                 </div>
               </div>
             </section>
@@ -91,7 +113,12 @@ export default function Dossier() {
                 L'Arma "Ius Italiae"
               </h2>
               <p className="mb-6 font-medium text-white">
-                La proposta di riforma "Ius Italiae" di Forza Italia non è una riforma. È una demolizione controllata della Legge 91/1992.
+                La proposta di riforma "Ius Italiae" di Forza Italia non è una riforma. È una demolizione controllata della Legge 91/1992
+                <SourceLink 
+                    href="https://forzaitalia.it/wp-content/uploads/2024/10/IUS_ITALIAE.pdf" 
+                    label="Doc. Ufficiale" 
+                    sourceName="Forza Italia" 
+                />.
               </p>
               <p className="mb-8">
                 Tajani giustifica questo attacco con il mito insultante del "Turismo del Passaporto", affermando che i discendenti "fingono di non parlare italiano solo per andare a Miami". Una generalizzazione che offende milioni di persone oneste per colpire pochi furbi.
@@ -131,7 +158,13 @@ export default function Dossier() {
                 Mentre la Lega agita lo spettro dell'"islamizzazione", il governo Tajani, tramite il <strong>Decreto Flussi</strong>, assegna quote massicce a lavoratori provenienti da Bangladesh, Pakistan e Tunisia.
               </p>
               <p className="mb-6">
-                Il risultato? <strong>Il collasso totale.</strong> Nel 2024, il sistema "Click Day" è stato infiltrato dalla criminalità organizzata, vendendo visti a persone che non avevano alcuna intenzione di lavorare. Il governo non riesce a controllare chi entra "legalmente", ma è perfettamente efficiente nel bloccare i discendenti italiani cristiani e cattolici del Sud America.
+                Il risultato? <strong>Il collasso totale.</strong> Nel 2024, il sistema "Click Day" è stato infiltrato dalla criminalità organizzata, vendendo visti a persone che non avevano alcuna intenzione di lavorare.
+                <SourceLink 
+                    href="https://ntplusdiritto.ilsole24ore.com/art/via-libera-decreto-flussi-novita-click-days-stagionali-controlli-sui-cellulari-e-datori-AG9JPTL" 
+                    label="Inchiesta Click Day" 
+                    sourceName="Il Sole 24 Ore" 
+                />
+                Il governo non riesce a controllare chi entra "legalmente", ma è perfettamente efficiente nel bloccare i discendenti italiani cristiani e cattolici del Sud America.
               </p>
               <div className="p-4 bg-red-900/20 border border-red-500/40 rounded text-center">
                 <p className="text-white font-bold">
@@ -147,7 +180,18 @@ export default function Dossier() {
                 Mentre chiude la porta al sangue, Tajani spalanca quella dello <em>Ius Scholae</em>. La proposta: cittadinanza dopo un ciclo scolastico.
               </p>
               <p className="mb-4">
-                Con proiezioni che indicano presto <strong>1 milione di studenti stranieri</strong>, lo Ius Scholae rischia di diventare uno strumento di alterazione demografica irreversibile, regalando la cittadinanza senza garantire una vera assimilazione culturale, come dimostrano i casi di studenti che non parlano italiano dopo 5 anni di scuola.
+                Con proiezioni che indicano presto <strong>1 milione di studenti stranieri</strong>
+                <SourceLink 
+                    href="https://www.ismu.org/quanti-sono-i-musulmani-in-italia-e-quanti-i-cristiani/" 
+                    label="Dati ISMU" 
+                    sourceName="Fondazione ISMU" 
+                />
+                , lo Ius Scholae rischia di diventare uno strumento di alterazione demografica irreversibile, regalando la cittadinanza senza garantire una vera assimilazione culturale, come dimostrano i casi di studenti che non parlano italiano dopo 5 anni di scuola
+                <SourceLink 
+                    href="https://www.tecnicadellascuola.it/ius-scholae-la-lega-getta-la-maschera-e-boccia-tajani-per-sasso-la-cittadinanza-non-si-regala-certi-alunni-stranieri-dopo-5-anni-di-scuola-non-parlano-ancora-italiano" 
+                    label="Report Scolastico" 
+                    sourceName="Tecnica della Scuola" 
+                />.
               </p>
             </section>
 
