@@ -1,10 +1,8 @@
-// client/src/pages/Dossier.tsx
-
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useEffect } from "react";
 import PageTransition from "@/components/PageTransition";
-import SourceLink from "@/components/SourceLink"; // Importe o novo componente
+import SourceLink from "@/components/SourceLink";
 
 export default function Dossier() {
   useEffect(() => {
@@ -43,17 +41,17 @@ export default function Dossier() {
               <span className="text-[#FF1E56] font-mono text-sm tracking-[0.2em] uppercase">Rapporto Confidenziale</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[0.9]">
-              IL TRADIMENTO <br />
-              DI SANGUE
+              LA DOTTRINA <br />
+              TAJANI
             </h1>
             <p className="text-2xl text-gray-300 leading-relaxed border-l-4 border-[#39FF14] pl-6 italic">
-              "Come il governo Tajani sta barattando 150 anni di storia della diaspora per una politica migratoria utilitaristica, fallimentare e culturalmente suicida."
+              "Un'analisi forense dell'Architettura della Decezione: come la Farnesina finanzia regimi autoritari mentre dichiara guerra alla diaspora italiana."
             </p>
           </header>
 
           <div className="space-y-20 text-gray-300 leading-relaxed text-lg">
             
-            {/* Introduzione */}
+            {/* Introduzione Agressiva */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
                 <span className="text-[#39FF14] text-6xl font-black opacity-50">01</span>
@@ -67,49 +65,74 @@ export default function Dossier() {
               </p>
             </section>
 
-            {/* A Mentira Econômica (FONTES INSERIDAS AQUI) */}
+            {/* A Mentira Econômica e o "Bancomat" */}
             <section className="bg-[#1b1f27] border-y border-[#3b4354] py-12 -mx-4 px-4 md:mx-0 md:px-8 md:rounded-xl">
               <h2 className="text-3xl font-bold text-white mb-8">
-                <span className="text-[#00FFFF]">02.</span> La Menzogna Economica
+                <span className="text-[#00FFFF]">02.</span> Il "Bancomat" della Farnesina
               </h2>
               <p className="mb-6">
-                La giustificazione ufficiale per aprire le porte all'immigrazione non-etnica è sempre economica. "Ce lo chiede il mercato", dicono. I dati indicano che i migranti contribuiscono per 
-                <strong className="text-white ml-1">154 miliardi di euro al PIL</strong>
-                <SourceLink 
-                    href="https://www.cinformi.it/Comunicazione/Notizie/Migranti-in-Italia-154-miliardi-di-PIL-9-del-totale" 
-                    label="Rif. Cinformi" 
-                    sourceName="Cinformi / Fondazione Moressa" 
-                />
-                . Ma questa è solo metà della storia.
+                Mentre i nostri consolati in Sud America crollano per mancanza di fondi, Tajani ha trasformato il Ministero degli Esteri in un ente pagatore per regimi instabili.
+                La strategia è chiara: <strong>finanziare l'esterno per bloccare l'interno.</strong>
               </p>
               <div className="grid md:grid-cols-2 gap-8 my-8">
-                <div className="bg-black/40 p-6 rounded border border-red-500/30">
-                   <h4 className="text-[#FF1E56] font-bold mb-2 text-xl">Costo Reale: €1,7 Miliardi</h4>
-                   <p className="text-sm">Il Ministro Piantedosi ha ammesso che l'Italia spende 1,7 miliardi di euro l'anno solo per il sistema di accoglienza (hotspot, CAS).
-                   <SourceLink 
-                     href="https://italianismo.com.br/it/italia-gasta-17-bi-de-euros-por-ano-com-acolhimento-de-imigrantes-diz-ministro/" 
-                     label="Dichiarazione Ministro" 
-                     sourceName="Min. Interno / Italianismo" 
-                   />
+                <div className="bg-black/40 p-6 rounded border border-red-500/30 relative overflow-hidden">
+                   <div className="absolute top-0 right-0 p-1 bg-red-500/20 text-[10px] text-red-500 font-bold">DATI UFFICIALI</div>
+                   <h4 className="text-[#FF1E56] font-bold mb-2 text-xl">L'Ipocrisia Albanese: €160 Milioni</h4>
+                   <p className="text-sm">
+                     Il Ministro Piantedosi ha confermato che i centri in Albania costano <strong>160 milioni di euro all'anno</strong>. 
+                     <SourceLink 
+                        href="https://tg24.sky.it/politica/2024/08/07/centro-migranti-albania-accordo-piantedosi" 
+                        label="Confessione Piantedosi" 
+                        sourceName="Sky TG24 / Min. Interno" 
+                     />
+                     Un'operazione di facciata costosissima, mentre si negano pochi milioni per assumere personale consolare in Brasile.
                    </p>
                 </div>
                 <div className="bg-black/40 p-6 rounded border border-[#39FF14]/30">
-                   <h4 className="text-[#39FF14] font-bold mb-2 text-xl">Tassa Raddoppiata: €600</h4>
-                   <p className="text-sm">Mentre sovvenzioniamo l'accoglienza straniera, Tajani vuole raddoppiare la tassa di cittadinanza per i discendenti. 
+                   <h4 className="text-[#39FF14] font-bold mb-2 text-xl">La Tassa della Vergogna: €600</h4>
+                   <p className="text-sm">Mentre regaliamo motovedette e fondi alla Tunisia e alla Libia senza garanzie sui diritti umani, Tajani vuole raddoppiare la tassa di cittadinanza per i discendenti a 600 euro. 
                    <SourceLink 
                      href="https://temi.camera.it/leg19/provvedimento/d-l-36-2025-disposizioni-urgenti-in-materia-di-cittadinanza.html" 
                      label="D.L. 36/2025" 
-                     sourceName="Camera dei Deputati" 
+                     sourceName="Atti Camera dei Deputati" 
                    />
-                   <strong>Lo straniero viene pagato, il fratello viene tassato.</strong></p>
+                   <strong>Il denaro degli italiani all'estero finanzia la politica estera fallimentare nel Mediterraneo.</strong></p>
                 </div>
+              </div>
+            </section>
+
+            {/* Sicurezza Nazionale Compromessa (CLICK DAY) */}
+            <section className="relative">
+              <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FF1E56] to-transparent"></div>
+              <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
+                <span className="text-[#FF1E56] text-6xl font-black opacity-50">03</span>
+                Sicurezza Nazionale Compromessa
+              </h2>
+              <div className="bg-[#FF1E56]/5 p-6 rounded border border-[#FF1E56]/20 mb-6">
+                <h3 className="text-[#FF1E56] font-bold text-xl mb-2 uppercase tracking-widest">Dossier Click Day</h3>
+                <p className="mb-4">
+                  La narrazione di "legge e ordine" di Tajani è crollata. Il sistema "Click Day" per i visti di lavoro è stato infiltrato dalla <strong>criminalità organizzata</strong>, che ha venduto visti a cittadini di Bangladesh e Pakistan.
+                </p>
+                <p className="text-sm text-gray-400 mb-4">
+                  Non lo diciamo noi, lo ha ammesso il Governo stesso. È una falla di sicurezza nazionale che espone l'Italia a rischi di infiltrazione terroristica, mentre si bloccano i discendenti cristiani e occidentali del Sud America.
+                  <SourceLink 
+                      href="https://ntplusdiritto.ilsole24ore.com/art/via-libera-decreto-flussi-novita-click-days-stagionali-controlli-sui-cellulari-e-datori-AG9JPTL" 
+                      label="Inchiesta Il Sole 24 Ore" 
+                      sourceName="Il Sole 24 Ore / Dati Giudiziari" 
+                  />
+                </p>
+                <ul className="space-y-2 text-sm font-mono text-[#FF1E56]">
+                  <li>> Mancanza totale di controlli OSINT sulle aziende richiedenti.</li>
+                  <li>> Vendita di visti nel mercato nero (fino a 15.000€).</li>
+                  <li>> Sospensione dei visti come ammissione di colpa.</li>
+                </ul>
               </div>
             </section>
 
             {/* O Ataque do Ius Italiae */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
-                <span className="text-[#FF1E56] text-6xl font-black opacity-50">03</span>
+                <span className="text-white text-6xl font-black opacity-20">04</span>
                 L'Arma "Ius Italiae"
               </h2>
               <p className="mb-6 font-medium text-white">
@@ -125,73 +148,36 @@ export default function Dossier() {
               </p>
 
               <div className="space-y-4">
-                <div className="flex gap-4 items-start bg-[#FF1E56]/5 p-4 rounded border-l-4 border-[#FF1E56]">
-                  <span className="font-bold text-[#FF1E56] text-xl">A.</span>
+                <div className="flex gap-4 items-start bg-[#2a2f3a] p-4 rounded">
+                  <span className="font-bold text-[#00FFFF] text-xl">A.</span>
                   <div>
                     <h4 className="text-white font-bold">Il Limite della 2ª Generazione</h4>
                     <p className="text-sm text-gray-400">Se il tuo bisnonno era italiano, sei fuori. Cancellazione retroattiva di un diritto di nascita.</p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-start bg-[#FF1E56]/5 p-4 rounded border-l-4 border-[#FF1E56]">
-                  <span className="font-bold text-[#FF1E56] text-xl">B.</span>
+                <div className="flex gap-4 items-start bg-[#2a2f3a] p-4 rounded">
+                  <span className="font-bold text-[#00FFFF] text-xl">B.</span>
                   <div>
                     <h4 className="text-white font-bold">Abolizione della Regola 1861</h4>
                     <p className="text-sm text-gray-400">Si vuole cancellare la storia unitaria d'Italia, negando la cittadinanza a chi discende dai fondatori della patria.</p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-start bg-[#FF1E56]/5 p-4 rounded border-l-4 border-[#FF1E56]">
-                  <span className="font-bold text-[#FF1E56] text-xl">C.</span>
-                  <div>
-                    <h4 className="text-white font-bold">Obbligo di Residenza</h4>
-                    <p className="text-sm text-gray-400">Costringere chi ha già una vita, un lavoro e una famiglia all'estero a trasferirsi in Italia. Una clausola impossibile per la maggioranza.</p>
-                  </div>
-                </div>
               </div>
             </section>
 
-            {/* A Questão Islâmica e o Fracasso */}
-            <section className="bg-[#1b1f27] p-8 rounded-xl shadow-2xl border border-gray-800">
-               <h2 className="text-3xl font-bold text-white mb-6">
-                <span className="text-[#00FFFF]">04.</span> La Preferenza Islamica e il Caos
-              </h2>
-              <p className="mb-6">
-                Mentre la Lega agita lo spettro dell'"islamizzazione", il governo Tajani, tramite il <strong>Decreto Flussi</strong>, assegna quote massicce a lavoratori provenienti da Bangladesh, Pakistan e Tunisia.
-              </p>
-              <p className="mb-6">
-                Il risultato? <strong>Il collasso totale.</strong> Nel 2024, il sistema "Click Day" è stato infiltrato dalla criminalità organizzata, vendendo visti a persone che non avevano alcuna intenzione di lavorare.
-                <SourceLink 
-                    href="https://ntplusdiritto.ilsole24ore.com/art/via-libera-decreto-flussi-novita-click-days-stagionali-controlli-sui-cellulari-e-datori-AG9JPTL" 
-                    label="Inchiesta Click Day" 
-                    sourceName="Il Sole 24 Ore" 
-                />
-                Il governo non riesce a controllare chi entra "legalmente", ma è perfettamente efficiente nel bloccare i discendenti italiani cristiani e cattolici del Sud America.
-              </p>
-              <div className="p-4 bg-red-900/20 border border-red-500/40 rounded text-center">
-                <p className="text-white font-bold">
-                  "Stanno sostituendo l'Ethnos (il popolo) con il Demos (la popolazione residente)."
-                </p>
-              </div>
-            </section>
-
-             {/* Ius Scholae */}
+             {/* Ius Scholae e Dati Demografici (LINK CORRETTO) */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">05. Il Cavallo di Troia: "Ius Scholae"</h2>
               <p className="mb-4">
                 Mentre chiude la porta al sangue, Tajani spalanca quella dello <em>Ius Scholae</em>. La proposta: cittadinanza dopo un ciclo scolastico.
               </p>
               <p className="mb-4">
-                Con proiezioni che indicano presto <strong>1 milione di studenti stranieri</strong>
+                Con proiezioni che indicano presto <strong>1 milione di studenti stranieri</strong>, lo Ius Scholae rischia di diventare uno strumento di alterazione demografica irreversibile. I dati della Fondazione ISMU confermano la portata di questa trasformazione.
                 <SourceLink 
-                    href="https://www.ismu.org/quanti-sono-i-musulmani-in-italia-e-quanti-i-cristiani/" 
-                    label="Dati ISMU" 
-                    sourceName="Fondazione ISMU" 
+                    href="https://www.ismu.org/" 
+                    label="Dati Fondazione ISMU" 
+                    sourceName="Fondazione ISMU - Rapporto sulle Migrazioni" 
                 />
-                , lo Ius Scholae rischia di diventare uno strumento di alterazione demografica irreversibile, regalando la cittadinanza senza garantire una vera assimilazione culturale, come dimostrano i casi di studenti che non parlano italiano dopo 5 anni di scuola
-                <SourceLink 
-                    href="https://www.tecnicadellascuola.it/ius-scholae-la-lega-getta-la-maschera-e-boccia-tajani-per-sasso-la-cittadinanza-non-si-regala-certi-alunni-stranieri-dopo-5-anni-di-scuola-non-parlano-ancora-italiano" 
-                    label="Report Scolastico" 
-                    sourceName="Tecnica della Scuola" 
-                />.
               </p>
             </section>
 
@@ -210,7 +196,7 @@ export default function Dossier() {
                   Ci aspettavamo un difensore dell'italianità nel mondo; abbiamo trovato un liquidatore della nostra eredità.
                 </p>
                 <p className="text-gray-500 text-xs mt-4 pt-4 border-t border-gray-800">
-                  Fonti Dati: Fondazione ISMU, Ministero dell'Interno, Fondazione Moressa, Atti Parlamentari D.L. 36/2025.
+                  Fonti Dati: Fondazione ISMU, Ministero dell'Interno, Il Sole 24 Ore, SkyTG24, Atti Parlamentari.
                 </p>
               </div>
             </section>
