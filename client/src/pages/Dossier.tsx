@@ -60,12 +60,9 @@ export default function Dossier() {
               <p className="mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-white first-letter:float-left first-letter:mr-3">
                 L'Italia si trova a un bivio esistenziale. Stretta tra un inverno demografico senza precedenti e una pressione migratoria strutturale, la leadership di Antonio Tajani ha operato una scelta di campo netta, crudele e non dichiarata: <strong>il sangue antico non basta più.</strong>
               </p>
-              <p>
-                In questo nuovo modello di "Nazione S.p.A.", il cittadino non è più chi condivide la storia e l'anima della nazione, ma chi è "funzionale" al mercato. I figli della diaspora, che hanno costruito nazioni come il Brasile e l'Argentina, sono stati declassati da "fratelli" a "passività di bilancio".
-              </p>
             </section>
 
-            {/* A Mentira Econômica e o "Bancomat" */}
+            {/* A Mentira Econômica */}
             <section className="bg-[#1b1f27] border-y border-[#3b4354] py-12 -mx-4 px-4 md:mx-0 md:px-8 md:rounded-xl">
               <h2 className="text-3xl font-bold text-white mb-8">
                 <span className="text-[#00FFFF]">02.</span> Il "Bancomat" della Farnesina
@@ -101,7 +98,7 @@ export default function Dossier() {
               </div>
             </section>
 
-            {/* Sicurezza Nazionale Compromessa (CLICK DAY) */}
+            {/* Sicurezza Nazionale Compromessa (CON VIDEO IL SOLE 24 ORE) */}
             <section className="relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FF1E56] to-transparent"></div>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
@@ -114,18 +111,35 @@ export default function Dossier() {
                   La narrazione di "legge e ordine" di Tajani è crollata. Il sistema "Click Day" per i visti di lavoro è stato infiltrato dalla <strong>criminalità organizzata</strong>, che ha venduto visti a cittadini di Bangladesh e Pakistan.
                 </p>
                 <p className="text-sm text-gray-400 mb-4">
-                  Non lo diciamo noi, lo ha ammesso il Governo stesso. È una falla di sicurezza nazionale che espone l'Italia a rischi di infiltrazione terroristica, mentre si bloccano i discendenti cristiani e occidentali del Sud America.
+                  Non lo diciamo noi, lo ha ammesso il Governo stesso. È una falla di sicurezza nazionale che espone l'Italia a rischi di infiltrazione terroristica.
                   <SourceLink 
                       href="https://ntplusdiritto.ilsole24ore.com/art/via-libera-decreto-flussi-novita-click-days-stagionali-controlli-sui-cellulari-e-datori-AG9JPTL" 
                       label="Inchiesta Il Sole 24 Ore" 
-                      sourceName="Il Sole 24 Ore / Dati Giudiziari" 
+                      sourceName="Il Sole 24 Ore" 
                   />
                 </p>
-                <ul className="space-y-2 text-sm font-mono text-[#FF1E56]">
-                  <li>> Mancanza totale di controlli OSINT sulle aziende richiedenti.</li>
-                  <li>> Vendita di visti nel mercato nero (fino a 15.000€).</li>
-                  <li>> Sospensione dei visti come ammissione di colpa.</li>
-                </ul>
+                
+                {/* VIDEO PROVA INTEGRADO (IL SOLE 24 ORE / MELONI) */}
+                <div className="mt-6 bg-black/60 p-4 rounded border border-gray-800">
+                   <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Video Testimonianza (Fonte: Il Sole 24 Ore)</p>
+                   <div className="flex flex-col md:flex-row gap-4 items-center">
+                      <div className="flex-1">
+                        <p className="text-white text-sm italic">
+                          "La criminalità organizzata si è infiltrata nella gestione delle domande... i decreti flussi usati come meccanismo per consentire l'accesso."
+                        </p>
+                        <p className="text-[#FF1E56] text-xs font-bold mt-2">— Ammissione Ufficiale del Governo</p>
+                      </div>
+                      <a 
+                        href="https://www.youtube.com/watch?v=-DLHvldxuus" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-[#FF1E56] hover:bg-[#FF1E56]/80 text-white px-4 py-2 rounded transition-colors font-bold text-sm whitespace-nowrap"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        Guarda la Confessione
+                      </a>
+                   </div>
+                </div>
               </div>
             </section>
 
@@ -136,12 +150,7 @@ export default function Dossier() {
                 L'Arma "Ius Italiae"
               </h2>
               <p className="mb-6 font-medium text-white">
-                La proposta di riforma "Ius Italiae" di Forza Italia non è una riforma. È una demolizione controllata della Legge 91/1992
-                <SourceLink 
-                    href="https://forzaitalia.it/wp-content/uploads/2024/10/IUS_ITALIAE.pdf" 
-                    label="Doc. Ufficiale" 
-                    sourceName="Forza Italia" 
-                />.
+                La proposta di riforma "Ius Italiae" di Forza Italia non è una riforma. È una demolizione controllata della Legge 91/1992.
               </p>
               <p className="mb-8">
                 Tajani giustifica questo attacco con il mito insultante del "Turismo del Passaporto", affermando che i discendenti "fingono di non parlare italiano solo per andare a Miami". Una generalizzazione che offende milioni di persone oneste per colpire pochi furbi.
@@ -165,7 +174,7 @@ export default function Dossier() {
               </div>
             </section>
 
-             {/* Ius Scholae e Dati Demografici (LINK CORRETTO) */}
+             {/* Ius Scholae e Dati Demografici (LINK ISMU CORRETTO) */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">05. Il Cavallo di Troia: "Ius Scholae"</h2>
               <p className="mb-4">
@@ -174,9 +183,9 @@ export default function Dossier() {
               <p className="mb-4">
                 Con proiezioni che indicano presto <strong>1 milione di studenti stranieri</strong>, lo Ius Scholae rischia di diventare uno strumento di alterazione demografica irreversibile. I dati della Fondazione ISMU confermano la portata di questa trasformazione.
                 <SourceLink 
-                    href="https://www.ismu.org/" 
-                    label="Dati Fondazione ISMU" 
-                    sourceName="Fondazione ISMU - Rapporto sulle Migrazioni" 
+                    href="https://www.ismu.org/in-10-anni-gli-alunni-con-background-migratorio-potranno-arrivare-a-un-milione/" 
+                    label="Dati Ufficiali ISMU 2024" 
+                    sourceName="Fondazione ISMU - Proiezione 1 Milione" 
                 />
               </p>
             </section>
