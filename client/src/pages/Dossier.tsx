@@ -18,7 +18,7 @@ export default function Dossier() {
           </Link>
           <div className="flex gap-4">
              <Link href="/evidence">
-              <Button variant="outline" className="border-[#FF1E56] text-[#FF1E56] hover:bg-[#FF1E56]/10">
+              <Button className="border border-[#FF1E56] text-[#FF1E56] bg-transparent hover:bg-[#FF1E56]/10">
                 Video Prova
               </Button>
             </Link>
@@ -47,30 +47,31 @@ export default function Dossier() {
           
           {/* Introduzione */}
           <section>
-            <h2 className="text-3xl font-bold text-white mb-6">1. Introduzione: Il Sangue contro l'Utilità</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">1. Il Paradosso dell'Identità</h2>
             <p className="mb-4">
               L'Italia si trova a un bivio esistenziale. Da un lato, l'inverno demografico; dall'altro, una pressione migratoria strutturale. In questo scenario, il Vicepremier Antonio Tajani ha operato una scelta di campo netta e crudele: <strong>il sangue antico non basta più, l'utilità economica presente è tutto ciò che conta.</strong>
             </p>
             <p>
-              Mentre la retorica ufficiale parla di "italianità", nei fatti si sta compiendo una transizione dolorosa: da una nazione fondata sulla discendenza (etno-ancestrale) a una nazione fondata sulla residenza e sulla funzionalità economica. In questo nuovo modello, i figli della diaspora non sono più risorse, ma "passività".
+              Mentre la retorica ufficiale parla di "italianità", nei fatti si sta compiendo una transizione dolorosa: da una nazione fondata sulla discendenza (etno-ancestrale) a una nazione fondata sulla residenza e sulla funzionalità economica.
             </p>
           </section>
 
-          {/* Dati Economici vs Retorica */}
+          {/* Islamizzazione e Decreto Flussi */}
           <section className="bg-[#1b1f27] border border-[#3b4354] p-8 rounded-sm">
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-[#00FFFF]">2.</span> La Menzogna Economica
+              <span className="text-[#00FFFF]">2.</span> La Preferenza Islamica
             </h2>
             <p className="mb-6">
-              La giustificazione per aprire le porte all'immigrazione non-etnica è sempre economica. Si dice che "ce lo chiede il mercato". I dati della Fondazione Moressa indicano che i migranti contribuiscono per <strong>154 miliardi di euro al PIL (9% del totale)</strong>.
+              I dati della Fondazione ISMU confermano che la demografia studentesca sta cambiando radicalmente, con proiezioni di <strong>1 milione di studenti stranieri</strong> in dieci anni.
             </p>
             <p className="mb-6">
-              Tuttavia, questa narrazione omette deliberatamente il costo sociale e di sicurezza. Il Ministro Piantedosi ha ammesso che l'Italia spende <strong>1,7 miliardi di euro l'anno</strong> solo per il sistema di accoglienza (hotspot, CAS).
+              Paradossalmente, mentre la Lega agita lo spettro dell'"islamizzazione", il <strong>Decreto Flussi</strong> del governo assegna quote massicce a lavoratori provenienti da Bangladesh, Pakistan e Tunisia. 
+              Il governo Tajani sta attivamente importando manodopera da paesi di cultura islamica per "necessità di mercato", mentre chiude le porte ai cristiani/cattolici sudamericani di sangue italiano.
             </p>
             <div className="bg-black/40 p-6 rounded border-l-2 border-[#00FFFF]">
-              <h4 className="text-white font-bold mb-2">Il Paradosso dei Costi</h4>
+              <h4 className="text-white font-bold mb-2">Il Fallimento del Click Day</h4>
               <p>
-                Mentre si spendono miliardi per accogliere chi arriva illegalmente o tramite corridoi umanitari, si vuole aumentare la tassa di cittadinanza per i discendenti da 300 a <strong>600 euro</strong>. Il messaggio è chiaro: lo straniero viene sovvenzionato, il fratello di sangue viene tassato.
+                Nel 2024, il sistema di visti è collassato a causa di frodi massive dal Bangladesh e Pakistan. Il crimine organizzato ha infiltrato il sistema digitale. Il governo non riesce a controllare chi entra "legalmente", ma è perfettamente efficiente nel bloccare i discendenti italiani.
               </p>
             </div>
           </section>
@@ -79,19 +80,15 @@ export default function Dossier() {
           <section>
             <h2 className="text-3xl font-bold text-white mb-6">3. "Ius Italiae": L'Arma contro la Diaspora</h2>
             <p className="mb-4">
-              La proposta di riforma "Ius Italiae" di Forza Italia non è una riforma: è una <strong>demolizione controllata</strong> della Legge 91/1992. Tajani giustifica questo attacco con il mito del "Turismo del Passaporto", affermando che i discendenti "fingono di non parlare italiano solo per andare a Miami".
+              La proposta "Ius Italiae" non è una riforma, è una <strong>demolizione controllata</strong> della Legge 91/1992. Tajani giustifica questo attacco con il mito del "Turismo del Passaporto", affermando che i discendenti vogliono solo "andare a Miami".
             </p>
-            <p className="mb-4">
-              Questa è una generalizzazione offensiva che riduce milioni di italo-brasiliani e italo-argentini a opportunisti.
-            </p>
-
             <div className="grid md:grid-cols-2 gap-8 mt-8">
               <div>
                 <h3 className="text-white font-bold text-xl mb-4 border-b border-[#FF1E56] pb-2">Le Nuove Regole Trappola</h3>
                 <ul className="space-y-3 list-disc pl-4">
-                  <li><strong>Limite alla 2ª Generazione:</strong> Se il tuo bisnonno era italiano, sei fuori.</li>
-                  <li><strong>Abolizione della Regola 1861:</strong> Cancellazione retroattiva dei diritti storici.</li>
-                  <li><strong>Obbligo di Residenza:</strong> Costringere chi vive all'estero a trasferirsi in Italia per anni.</li>
+                  <li><strong>Limite alla 2ª Generazione:</strong> Cancellazione dei diritti per milioni di persone.</li>
+                  <li><strong>Abolizione della Regola 1861:</strong> Cancellazione retroattiva della storia.</li>
+                  [cite_start]<li><strong>Tassa Raddoppiata:</strong> Da €300 a €600 per pratica[cite: 14].</li>
                 </ul>
               </div>
               <div className="flex flex-col justify-center bg-[#FF1E56]/5 p-6 rounded text-sm">
@@ -103,40 +100,17 @@ export default function Dossier() {
             </div>
           </section>
 
-          {/* Fallimento Amministrativo */}
-          <section className="bg-[#1b1f27] border border-[#3b4354] p-8 rounded-sm">
-             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-[#39FF14]">4.</span> Il Fallimento del "Click Day"
-            </h2>
-            <p className="mb-4">
-              Tajani sostiene che la "migrazione legale" è la soluzione. Ma la realtà amministrativa racconta un'altra storia. Nel 2024, il sistema "Click Day" per i lavoratori stranieri è collassato sotto il peso di <strong>frodi massive</strong> e infiltrazioni criminali, specialmente da Bangladesh, Pakistan e Sri Lanka.
-            </p>
-            <p>
-              Il governo ha dovuto sospendere i visti perché non riusciva a distinguere i lavoratori onesti dai trafficanti. Eppure, continuano a promuovere l'apertura verso paesi culturalmente distanti, mentre chiudono i consolati in Sud America, dove la frode è inesistente e il legame culturale è totale.
-            </p>
-          </section>
-
-           {/* Islamizzazione e Ius Scholae */}
-          <section>
-            <h2 className="text-3xl font-bold text-white mb-6">5. Il Cavallo di Troia: "Ius Scholae"</h2>
-            <p className="mb-4">
-              Mentre chiude la porta al sangue italiano, Tajani spalanca quella dello <em>Ius Scholae</em>. La proposta è di dare la cittadinanza dopo un ciclo scolastico.
-            </p>
-            <p className="mb-4">
-              La Lega di Salvini ha giustamente identificato il rischio: con le proiezioni che indicano presto <strong>1 milione di studenti stranieri</strong>, molti dei quali di religione islamica e provenienti da contesti non integrati, lo Ius Scholae rischia di diventare uno strumento di rapida alterazione demografica e culturale.
-            </p>
-            <p className="p-4 bg-[#39FF14]/5 border-l-2 border-[#39FF14] mt-4">
-              La strategia è chiara: sostituire l'<em>ethnos</em> (la discendenza) con il <em>demos</em> (la residenza). Un italiano non è più chi ha sangue italiano, ma chiunque occupi un banco di scuola per 10 anni.
-            </p>
-          </section>
-
+          {/* Conclusione */}
           <section className="border-t border-gray-800 pt-12 mt-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Conclusione</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Conclusione: Sangue vs Utilità</h2>
             <p className="text-xl text-gray-300 font-medium">
-              Siamo di fronte a un'operazione di ingegneria sociale. Tajani e i suoi alleati tecnocrati hanno deciso che il futuro dell'Italia non passa per il Brasile o l'Argentina, ma per il Nord Africa e il Medio Oriente.
+              Il governo sta inviando un messaggio chiaro: <strong>il sangue antico non basta più.</strong> Un argentino con un bisavô italiano è visto come un "passivo". Un lavoratore straniero è visto come una "necessità".
             </p>
-            <p className="mt-6 text-gray-400 text-sm">
-              Tutti i dati citati in questo dossier provengono da fonti ufficiali: Fondazione ISMU, Ministero dell'Interno, Fondazione Moressa e atti parlamentari del D.L. 36/2025.
+            <p className="mt-4 text-gray-400">
+              Questa è un'operazione di ingegneria sociale. Stanno sostituendo la "Tribù Globale" italiana con una popolazione di residenti funzionali all'economia, indipendentemente dalla loro cultura o origine.
+            </p>
+            <p className="mt-8 text-xs text-gray-500">
+              Fonti: Fondazione ISMU, Ministero dell'Interno, Fondazione Moressa, Atti Parlamentari D.L. 36/2025.
             </p>
           </section>
 
