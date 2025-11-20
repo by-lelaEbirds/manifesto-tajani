@@ -11,16 +11,22 @@ export default function Home() {
     }
   };
 
-  // URL DO ABAIXO ASSINADO
   const PETITION_URL = "https://www.change.org/p/ripudio-al-d-l-tajani-28-03-25";
 
   return (
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground dark">
         
-        {/* HEADER */}
+        {/* HEADER CON BANDIERA ITALIANA */}
         <div className="sticky top-0 z-50 w-full">
-            <div className="h-1 bg-[#39FF14]"></div>
+            {/* Linha da Bandeira */}
+            <div 
+              className="h-1.5 w-full" 
+              style={{
+                background: "linear-gradient(90deg, #39FF14 0%, #39FF14 33.33%, #ffffff 33.33%, #ffffff 66.66%, #FF1E56 66.66%, #FF1E56 100%)"
+              }}
+            ></div>
+            
             <nav className="bg-black/50 backdrop-blur-sm border-b border-[#3b4354]">
             <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                 <h1 className="text-xl font-bold text-white">Manifesto Tajani</h1>
@@ -165,7 +171,7 @@ export default function Home() {
                 <div className="bg-[#1b1f27] border border-[#3b4354] p-8 rounded-sm space-y-6 text-gray-300 leading-relaxed">
                 <div>
                     <h3 className="text-2xl font-bold text-white mb-4">Preambolo</h3>
-                    <p>Noi, cittadini italiani per diritto di sangue (Jus Sanguinis), discendenti di coloro che l'Italia ha esportato nel mondo, dichiariamo solennemente che il Decreto-Legge n. 36/2025 è profondamente incostituzionale e representa un tradimento dei principi fondamentali della Repubblica Italiana.</p>
+                    <p>Noi, cittadini italiani per diritto di sangue (Jus Sanguinis), discendenti di coloro che l'Italia ha esportato nel mondo, dichiariamo solennemente che il Decreto-Legge n. 36/2025 è profondamente incostituzionale e rappresenta un tradimento dei principi fondamentali della Repubblica Italiana.</p>
                 </div>
                 <div>
                     <h3 className="text-2xl font-bold text-white mb-4">I. Il Fondamento Perpetuo</h3>
