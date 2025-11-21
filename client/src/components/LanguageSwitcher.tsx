@@ -65,8 +65,7 @@ export default function LanguageSwitcher() {
         <Button
           key={lang.code}
           onClick={() => setLanguage(lang.code)}
-          variant="ghost"
-          className={`p-0 w-8 h-6 overflow-hidden rounded-sm border transition-all hover:scale-110 ${
+          className={`p-0 w-8 h-6 overflow-hidden rounded-sm border transition-all hover:scale-110 bg-transparent hover:bg-white/10 ${
             language === lang.code 
               ? "border-[#39FF14] shadow-[0_0_10px_rgba(57,255,20,0.5)] opacity-100" 
               : "border-transparent opacity-50 hover:opacity-100"
