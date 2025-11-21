@@ -3,8 +3,12 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import PageTransition from "@/components/PageTransition";
 import SourceLink from "@/components/SourceLink";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Evidence() {
+  const { t } = useLanguage();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -27,20 +31,23 @@ export default function Evidence() {
 
         <nav className="sticky top-1.5 z-50 w-full bg-black/80 backdrop-blur-md border-b border-[#3b4354]">
           <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/">
-              <span className="text-xl font-bold text-white cursor-pointer hover:text-[#39FF14] transition-colors tracking-tight">
-                Manifesto Tajani
-              </span>
-            </Link>
+            <div className="flex items-center gap-4">
+                <Link href="/">
+                  <span className="text-xl font-bold text-white cursor-pointer hover:text-[#39FF14] transition-colors tracking-tight hidden sm:block">
+                    Manifesto Tajani
+                  </span>
+                </Link>
+                <LanguageSwitcher />
+            </div>
             <div className="flex gap-4">
               <Link href="/dossier">
                 <Button className="border border-[#00FFFF] text-[#00FFFF] bg-transparent hover:bg-[#00FFFF]/10 transition-all duration-300">
-                  Analisi Dati
+                  {t.nav.analysis_btn}
                 </Button>
               </Link>
               <Link href="/">
                 <Button className="text-gray-300 hover:text-white bg-transparent hover:bg-white/5">
-                  Torna alla Home
+                  {t.nav.backHome}
                 </Button>
               </Link>
             </div>
@@ -51,16 +58,15 @@ export default function Evidence() {
           <header className="mb-12 text-center">
             <div className="inline-block bg-red-500/10 border border-red-500/50 px-4 py-1 rounded-full mb-4">
               <span className="text-[#FF1E56] font-mono text-xs font-bold tracking-widest uppercase animate-pulse">
-                ⚠️ Prova Forense Acquisita
+                ⚠️ {t.evidence.label}
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-none">
-              La Narrazione <br />
-              <span className="text-[#FF1E56] text-shadow-glow">vs. La Realtà</span>
+              {t.evidence.title_line1} <br />
+              <span className="text-[#FF1E56] text-shadow-glow">{t.evidence.title_line2}</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Mentre i nostri consolati chiudono, i corridoi aerei si aprono.
-              <br/>Guarda con i tuoi occhi il doppio standard del Vicepremier.
+              {t.evidence.subtitle}
             </p>
           </header>
 
@@ -85,7 +91,7 @@ export default function Evidence() {
             <div className="w-full p-3 bg-[#1b1f27] border-t border-[#3b4354]">
               <p className="text-gray-400 text-sm font-mono flex items-center justify-center gap-2">
                 <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                FONTE: Canale Ufficiale Ministro Tajani (Ottobre 2025)
+                {t.evidence.video_source}
               </p>
             </div>
           </section>
@@ -95,10 +101,10 @@ export default function Evidence() {
             
             <section className="bg-gradient-to-r from-[#1b1f27] to-[#101622] p-8 border-l-4 border-[#FF1E56] rounded-r-lg">
               <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="text-[#FF1E56]">01.</span> L'Anomalia Demografica
+                <span className="text-[#FF1E56]">01.</span> {t.evidence.section1_title}
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Osservate attentamente i minuti <strong>0:04</strong> e <strong>0:08</strong>. Il governo parla di "giovani studenti", ma le immagini rivelano <strong>uomini in età avanzata</strong> a bordo di voli umanitari finanziati dalle tasse italiane.
+                {t.evidence.section1_text}
                 <SourceLink 
                   href="https://www.agenzianova.com/news/gaza-proseguono-i-corridoi-universitari-arrivati-in-italia-49-studenti-con-borse-di-studio-video/" 
                   label="Video Agenzia Nova" 
@@ -106,37 +112,36 @@ export default function Evidence() {
                 />
               </p>
               <div className="bg-black/40 p-6 rounded border border-red-900/50 backdrop-blur-sm">
-                <h3 className="text-[#FF1E56] font-bold text-xl mb-2 uppercase tracking-wide">Contraddizione Logica</h3>
+                <h3 className="text-[#FF1E56] font-bold text-xl mb-2 uppercase tracking-wide">{t.evidence.section1_box_title}</h3>
                 <p className="text-gray-300 italic mb-4 text-lg">
-                  "L'obiettivo è formare la futura classe dirigente..." — Antonio Tajani
+                  {t.evidence.section1_box_quote}
                 </p>
                 <p className="text-white font-medium border-t border-gray-700 pt-4">
-                  <strong>Analisi Tattica:</strong> Se l'Italia soffre di un "inverno demografico", perché importiamo uomini anziani mentre espelliamo burocraticamente i giovani discendenti sudamericani? 
-                  Questa non è accoglienza. È <strong>sostituzione demografica</strong> mascherata da umanitarismo.
+                  <strong>{t.evidence.section1_box_analysis}</strong>
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Due Pesi, Due Misure</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">{t.evidence.comparison_title}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#3b4354] rounded-lg overflow-hidden shadow-2xl">
                 <div className="bg-[#101622] p-8 border-b md:border-b-0 md:border-r border-[#3b4354] hover:bg-[#151b29] transition-colors">
                   <div className="flex items-center gap-3 mb-6">
                      <span className="text-3xl">✈️</span>
-                     <h3 className="text-[#39FF14] font-black text-2xl uppercase tracking-wide">Il Privilegio Gaza</h3>
+                     <h3 className="text-[#39FF14] font-black text-2xl uppercase tracking-wide">{t.evidence.gaza_title}</h3>
                   </div>
                   <ul className="space-y-4 text-gray-300 font-medium">
                     <li className="flex items-start gap-3">
-                      <span className="text-[#39FF14] font-bold">✓</span> Voli di Stato gratuiti (pagati da noi).
+                      <span className="text-[#39FF14] font-bold">✓</span> {t.evidence.gaza_p1}
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#39FF14] font-bold">✓</span> Accoglienza personale del Ministro.
+                      <span className="text-[#39FF14] font-bold">✓</span> {t.evidence.gaza_p2}
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#39FF14] font-bold">✓</span> Accesso diretto a 22 Università.
+                      <span className="text-[#39FF14] font-bold">✓</span> {t.evidence.gaza_p3}
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#39FF14] font-bold">✓</span> Nessun requisito di lingua o sangue.
+                      <span className="text-[#39FF14] font-bold">✓</span> {t.evidence.gaza_p4}
                     </li>
                   </ul>
                 </div>
@@ -144,20 +149,20 @@ export default function Evidence() {
                   <div className="absolute inset-0 bg-red-900/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
                   <div className="flex items-center gap-3 mb-6">
                      <span className="text-3xl">🚫</span>
-                     <h3 className="text-[#FF1E56] font-black text-2xl uppercase tracking-wide">La Punizione Diaspora</h3>
+                     <h3 className="text-[#FF1E56] font-black text-2xl uppercase tracking-wide">{t.evidence.diaspora_title}</h3>
                   </div>
                   <ul className="space-y-4 text-gray-300 font-medium">
                     <li className="flex items-start gap-3">
-                      <span className="text-[#FF1E56] font-bold">✗</span> 12 anni di attesa per un timbro.
+                      <span className="text-[#FF1E56] font-bold">✗</span> {t.evidence.diaspora_p1}
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#FF1E56] font-bold">✗</span> Insultati come "Turisti".
+                      <span className="text-[#FF1E56] font-bold">✗</span> {t.evidence.diaspora_p2}
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#FF1E56] font-bold">✗</span> Tasse raddoppiate a €600.
+                      <span className="text-[#FF1E56] font-bold">✗</span> {t.evidence.diaspora_p3}
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#FF1E56] font-bold">✗</span> Minaccia di cancellazione dei diritti.
+                      <span className="text-[#FF1E56] font-bold">✗</span> {t.evidence.diaspora_p4}
                     </li>
                   </ul>
                 </div>
@@ -167,7 +172,7 @@ export default function Evidence() {
             <section className="text-center pt-12 pb-8">
               <Link href="/dossier">
                 <Button className="bg-[#39FF14] text-black font-black text-xl h-16 px-10 hover:bg-[#39FF14]/80 rounded-none skew-x-[-10deg] hover:skew-x-0 transition-transform shadow-[0_0_20px_rgba(57,255,20,0.4)]">
-                  LEGGI IL DOSSIER COMPLETO
+                  {t.evidence.cta_read_dossier}
                 </Button>
               </Link>
             </section>
