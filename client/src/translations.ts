@@ -6,6 +6,8 @@ export type TranslationContent = {
     demands: string;
     dossier: string;
     backHome: string;
+    evidence_btn: string;
+    analysis_btn: string;
   };
   hero: {
     title_prefix: string;
@@ -68,6 +70,70 @@ export type TranslationContent = {
     cta_button: string;
     disclaimer: string;
   };
+  dossier: {
+    label: string;
+    title_line1: string;
+    title_line2: string;
+    quote: string;
+    section1_title: string;
+    section1_text1: string;
+    section1_text2: string;
+    section2_title: string;
+    section2_intro: string;
+    video_label: string;
+    video_protocol: string;
+    video_quote: string;
+    video_analysis: string;
+    card_albania_title: string;
+    card_albania_text: string;
+    card_tax_title: string;
+    card_tax_text: string;
+    section3_title: string;
+    section3_card_title: string;
+    section3_text: string;
+    section3_subtext: string;
+    section3_video_label: string;
+    section3_video_quote: string;
+    section3_video_btn: string;
+    section4_title: string;
+    section4_text1: string;
+    section4_text2: string;
+    section4_point_a_title: string;
+    section4_point_a_desc: string;
+    section4_point_b_title: string;
+    section4_point_b_desc: string;
+    section5_title: string;
+    section5_text1: string;
+    section5_text2: string;
+    conclusion_title: string;
+    conclusion_text: string;
+    disclaimer_title: string;
+    disclaimer_text: string;
+  };
+  evidence: {
+    label: string;
+    title_line1: string;
+    title_line2: string;
+    subtitle: string;
+    video_source: string;
+    section1_title: string;
+    section1_text: string;
+    section1_box_title: string;
+    section1_box_quote: string;
+    section1_box_analysis: string;
+    comparison_title: string;
+    gaza_title: string;
+    gaza_p1: string;
+    gaza_p2: string;
+    gaza_p3: string;
+    gaza_p4: string;
+    diaspora_title: string;
+    diaspora_p1: string;
+    diaspora_p2: string;
+    diaspora_p3: string;
+    diaspora_p4: string;
+    cta_read_dossier: string;
+  };
 };
 
 export const translations: Record<Language, TranslationContent> = {
@@ -77,6 +143,8 @@ export const translations: Record<Language, TranslationContent> = {
       demands: "Esigenze",
       dossier: "Dossier Analitico",
       backHome: "Torna alla Home",
+      evidence_btn: "Video Prova",
+      analysis_btn: "Analisi Dati",
     },
     hero: {
       title_prefix: "Il Decreto Tajani",
@@ -118,7 +186,7 @@ export const translations: Record<Language, TranslationContent> = {
       fundament_title: "I. Il Fondamento Perpetuo",
       fundament_desc1: "Il Jus Sanguinis non è una concessione dello Stato italiano. È un diritto acquisito a titolo originario alla nascita.",
       fundament_desc2: "La Corte di Cassazione ha qualificato questo diritto come soggettivo e imprescritibile. Non è una grazia.",
-      distinction_title: "II. La Distinzione Cruciale",
+      distinction_title: "II. La Distinzione Crucial",
       distinction_desc: "Il Decreto Tajani tenta illegittimamente di trasformare il riconoscimento (atto dichiarativo) in una concessione (atto costitutivo).",
     },
     demands: {
@@ -139,6 +207,70 @@ export const translations: Record<Language, TranslationContent> = {
       cta_button: "Sostieni la Causa",
       disclaimer: "Non affiliato a partiti politici. Iniziativa civile indipendente.",
     },
+    dossier: {
+      label: "Rapporto Confidenziale",
+      title_line1: "LA DOTTRINA",
+      title_line2: "TAJANI",
+      quote: "\"Un'analisi forense dell'Architettura della Decezione: come la Farnesina finanzia regimi autoritari mentre dichiara guerra alla diaspora italiana.\"",
+      section1_title: "Il Calcolo Cinico",
+      section1_text1: "L'Italia si trova a un bivio esistenziale. Stretta tra un inverno demografico senza precedenti e una pressione migratoria strutturale, la leadership di Antonio Tajani ha operato una scelta di campo netta, crudele e non dichiarata: il sangue antico non basta più.",
+      section1_text2: "In questo nuovo modello di \"Nazione S.p.A.\", il cittadino non è più chi condivide la storia e l'anima della nazione, ma chi è \"funzionale\" al mercato. I figli della diaspora sono stati declassati da \"fratelli\" a \"passività di bilancio\".",
+      section2_title: "Il \"Bancomat\" della Farnesina",
+      section2_intro: "Mentre i nostri consolati in Sud America crollano per mancanza di fondi, Tajani ha trasformato il Ministero degli Esteri in un ente pagatore per regimi instabili. La strategia è chiara: finanziare l'esterno per bloccare l'interno.",
+      video_label: "Archivio Video: Agenzia Vista",
+      video_protocol: "PROTOCOLLO TUNISIA",
+      video_quote: "\"Il memorandum... non riguarda solo la gestione dei flussi migratori, è un investimento nella stabilità e nella prosperità condivisa...\"",
+      video_analysis: "ANALISI: La \"stabilità\" citata si traduce nel finanziamento di guardie costiere, mentre i fondi per la \"prosperità condivisa\" vengono negati ai consolati italiani.",
+      card_albania_title: "L'Ipocrisia Albanese: €160 Milioni",
+      card_albania_text: "Il Ministro Piantedosi ha confermato che i centri in Albania costano 160 milioni di euro all'anno. Un'operazione di facciata costosissima.",
+      card_tax_title: "La Tassa della Vergogna: €600",
+      card_tax_text: "Mentre regaliamo motovedette alla Tunisia, Tajani vuole raddoppiare la tassa di cittadinanza per i discendenti a 600 euro.",
+      section3_title: "Sicurezza Nazionale Compromessa",
+      section3_card_title: "Dossier Click Day",
+      section3_text: "La narrazione di \"legge e ordine\" è crollata. Il sistema \"Click Day\" per i visti di lavoro è stato infiltrato dalla criminalità organizzata.",
+      section3_subtext: "Non lo diciamo noi, lo ha ammesso il Governo stesso. È una falla di sicurezza nazionale.",
+      section3_video_label: "Video Testimonianza (Fonte: Il Sole 24 Ore)",
+      section3_video_quote: "\"La criminalità organizzata si è infiltrata nella gestione delle domande...\"",
+      section3_video_btn: "Guarda la Confessione",
+      section4_title: "L'Arma \"Ius Italiae\"",
+      section4_text1: "La proposta di riforma \"Ius Italiae\" di Forza Italia non è una riforma. È una demolizione controllata della Legge 91/1992.",
+      section4_text2: "Tajani giustifica questo attacco con il mito insultante del \"Turismo del Passaporto\".",
+      section4_point_a_title: "Il Limite della 2ª Generazione",
+      section4_point_a_desc: "Se il tuo bisnonno era italiano, sei fuori. Cancellazione retroattiva di un diritto di nascita.",
+      section4_point_b_title: "Abolizione della Regola 1861",
+      section4_point_b_desc: "Si vuole cancellare la storia unitaria d'Italia, negando la cittadinanza a chi discende dai fondatori della patria.",
+      section5_title: "Il Cavallo di Troia: \"Ius Scholae\"",
+      section5_text1: "Mentre chiude la porta al sangue, Tajani spalanca quella dello Ius Scholae. La proposta: cittadinanza dopo un ciclo scolastico.",
+      section5_text2: "Con proiezioni che indicano presto 1 milione di studenti stranieri, lo Ius Scholae rischia di diventare uno strumento di alterazione demografica irreversibile.",
+      conclusion_title: "Conclusione",
+      conclusion_text: "Siamo di fronte a un'operazione di ingegneria sociale. Tajani e i suoi alleati tecnocrati hanno deciso che il futuro dell'Italia non passa per San Paolo o Buenos Aires, ma per Tunisi e Islamabad.",
+      disclaimer_title: "Dichiarazione di Indipendenza",
+      disclaimer_text: "Questo sito e questo dossier NON hanno alcun finanziamento politico. Non siamo legati a partiti. Siamo cittadini, discendenti e patrioti profondamente delusi.",
+    },
+    evidence: {
+      label: "Prova Forense Acquisita",
+      title_line1: "La Narrazione",
+      title_line2: "vs. La Realtà",
+      subtitle: "Mentre i nostri consolati chiudono, i corridoi aerei si aprono. Guarda con i tuoi occhi il doppio standard del Vicepremier.",
+      video_source: "FONTE: Canale Ufficiale Ministro Tajani (Ottobre 2025)",
+      section1_title: "L'Anomalia Demografica",
+      section1_text: "Osservate attentamente i minuti 0:04 e 0:08. Il governo parla di \"giovani studenti\", ma le immagini rivelano uomini in età avanzata a bordo di voli umanitari finanziati dalle tasse italiane.",
+      section1_box_title: "Contraddizione Logica",
+      section1_box_quote: "\"L'obiettivo è formare la futura classe dirigente...\" — Antonio Tajani",
+      section1_box_analysis: "Analisi Tattica: Se l'Italia soffre di un \"inverno demografico\", perché importiamo uomini anziani mentre espelliamo burocraticamente i giovani discendenti sudamericani?",
+      comparison_title: "Due Pesi, Due Misure",
+      gaza_title: "Il Privilegio Gaza",
+      gaza_p1: "Voli di Stato gratuiti (pagati da noi).",
+      gaza_p2: "Accoglienza personale del Ministro.",
+      gaza_p3: "Accesso diretto a 22 Università.",
+      gaza_p4: "Nessun requisito di lingua o sangue.",
+      diaspora_title: "La Punizione Diaspora",
+      diaspora_p1: "12 anni di attesa per un timbro.",
+      diaspora_p2: "Insultati come \"Turisti\".",
+      diaspora_p3: "Tasse raddoppiate a €600.",
+      diaspora_p4: "Minaccia di cancellazione dei diritti.",
+      cta_read_dossier: "LEGGI IL DOSSIER COMPLETO",
+    }
   },
   pt: {
     nav: {
@@ -146,6 +278,8 @@ export const translations: Record<Language, TranslationContent> = {
       demands: "Exigências",
       dossier: "Dossiê Analítico",
       backHome: "Voltar para Home",
+      evidence_btn: "Vídeo Prova",
+      analysis_btn: "Análise de Dados",
     },
     hero: {
       title_prefix: "O Decreto Tajani",
@@ -185,7 +319,7 @@ export const translations: Record<Language, TranslationContent> = {
       preamble_title: "Preâmbulo",
       preamble_desc: "Nós, cidadãos italianos por direito de sangue, declaramos que o Decreto-Lei n. 36/2025 é profundamente inconstitucional.",
       fundament_title: "I. O Fundamento Perpétuo",
-      fundament_desc1: "O Jus Sanguinis não é uma concessão do Estado. É um direito adquirido a título originário no nascimento.",
+      fundament_desc1: "O Jus Sanguinis não é uma concessão do Estado. É um direito adquirido a título originario no nascimento.",
       fundament_desc2: "A Corte de Cassação qualificou este direito como subjetivo e imprescritível. Não é um favor.",
       distinction_title: "II. A Distinção Crucial",
       distinction_desc: "O Decreto tenta transformar ilegitimamente o reconhecimento (ato declaratório) em concessão (ato constitutivo).",
@@ -208,6 +342,70 @@ export const translations: Record<Language, TranslationContent> = {
       cta_button: "Apoie a Causa",
       disclaimer: "Não afiliado a partidos políticos. Iniciativa civil independente.",
     },
+    dossier: {
+      label: "Relatório Confidencial",
+      title_line1: "A DOUTRINA",
+      title_line2: "TAJANI",
+      quote: "\"Uma análise forense da Arquitetura da Decepção: como a Farnesina financia regimes autoritários enquanto declara guerra à diáspora italiana.\"",
+      section1_title: "O Cálculo Cínico",
+      section1_text1: "A Itália encontra-se numa encruzilhada existencial. Pressionada entre um inverno demográfico sem precedentes e uma pressão migratória estrutural, a liderança de Tajani fez uma escolha clara: o sangue antigo não basta mais.",
+      section1_text2: "Neste novo modelo de \"Nação S.p.A.\", o cidadão não é mais quem compartilha a história da nação, mas quem é \"funcional\" ao mercado. Os filhos da diáspora foram rebaixados de \"irmãos\" para \"passivos orçamentários\".",
+      section2_title: "O \"Caixa Eletrônico\" da Farnesina",
+      section2_intro: "Enquanto nossos consulados na América do Sul colapsam por falta de fundos, Tajani transformou o Ministério das Relações Exteriores em um pagador para regimes instáveis.",
+      video_label: "Arquivo Vídeo: Agência Vista",
+      video_protocol: "PROTOCOLO TUNÍSIA",
+      video_quote: "\"O memorando... não diz respeito apenas à gestão dos fluxos migratórios, é um investimento na estabilidade...\"",
+      video_analysis: "ANÁLISE: A \"estabilidade\" citada traduz-se no financiamento de guardas costeiras, enquanto os fundos são negados aos consulados italianos.",
+      card_albania_title: "A Hipocrisia Albanesa: €160 Milhões",
+      card_albania_text: "O Ministro Piantedosi confirmou que os centros na Albânia custam 160 milhões de euros por ano. Uma operação de fachada caríssima.",
+      card_tax_title: "A Taxa da Vergonha: €600",
+      card_tax_text: "Enquanto damos barcos de patrulha à Tunísia, Tajani quer dobrar a taxa de cidadania para os descendentes para 600 euros.",
+      section3_title: "Segurança Nacional Comprometida",
+      section3_card_title: "Dossiê Click Day",
+      section3_text: "A narrativa de \"lei e ordem\" colapsou. O sistema \"Click Day\" para vistos de trabalho foi infiltrado pelo crime organizado.",
+      section3_subtext: "Não somos nós que dizemos, o próprio Governo admitiu. É uma falha de segurança nacional.",
+      section3_video_label: "Vídeo Testemunho (Fonte: Il Sole 24 Ore)",
+      section3_video_quote: "\"O crime organizado infiltrou-se na gestão dos pedidos...\"",
+      section3_video_btn: "Assista à Confissão",
+      section4_title: "A Arma \"Ius Italiae\"",
+      section4_text1: "A proposta de reforma \"Ius Italiae\" não é uma reforma. É uma demolição controlada da Lei 91/1992.",
+      section4_text2: "Tajani justifica este ataque com o mito insultuoso do \"Turismo do Passaporte\".",
+      section4_point_a_title: "O Limite da 2ª Geração",
+      section4_point_a_desc: "Se o seu bisavô era italiano, você está fora. Cancelamento retroativo de um direito de nascença.",
+      section4_point_b_title: "Abolição da Regra 1861",
+      section4_point_b_desc: "Querem apagar a história unitária da Itália, negando a cidadania a quem descende dos fundadores da pátria.",
+      section5_title: "O Cavalo de Troia: \"Ius Scholae\"",
+      section5_text1: "Enquanto fecha a porta ao sangue, Tajani escancara a do Ius Scholae. A proposta: cidadania após um ciclo escolar.",
+      section5_text2: "Com projeções indicando em breve 1 milhão de estudantes estrangeiros, o Ius Scholae arrisca tornar-se um instrumento de alteração demográfica irreversível.",
+      conclusion_title: "Conclusão",
+      conclusion_text: "Estamos diante de uma operação de engenharia social. Tajani e seus aliados tecnocratas decidiram que o futuro da Itália não passa por São Paulo ou Buenos Aires, mas por Túnis e Islamabad.",
+      disclaimer_title: "Declaração de Independência",
+      disclaimer_text: "Este site e este dossiê NÃO têm financiamento político. Não somos ligados a partidos. Somos cidadãos, descendentes e patriotas profundamente desiludidos.",
+    },
+    evidence: {
+      label: "Prova Forense Adquirida",
+      title_line1: "A Narrativa",
+      title_line2: "vs. A Realidade",
+      subtitle: "Enquanto nossos consulados fecham, os corredores aéreos se abrem. Veja com seus próprios olhos o duplo padrão do Vice-primeiro-ministro.",
+      video_source: "FONTE: Canal Oficial Ministro Tajani (Outubro 2025)",
+      section1_title: "A Anomalia Demográfica",
+      section1_text: "Observe atentamente os minutos 0:04 e 0:08. O governo fala de \"jovens estudantes\", mas as imagens revelam homens em idade avançada a bordo de voos humanitários financiados pelos impostos italianos.",
+      section1_box_title: "Contradição Lógica",
+      section1_box_quote: "\"O objetivo é formar a futura classe dirigente...\" — Antonio Tajani",
+      section1_box_analysis: "Análise Tática: Se a Itália sofre de um \"inverno demográfico\", por que importamos homens idosos enquanto expulsamos burocraticamente os jovens descendentes sul-americanos?",
+      comparison_title: "Dois Pesos, Duas Medidas",
+      gaza_title: "O Privilégio Gaza",
+      gaza_p1: "Voos de Estado gratuitos (pagos por nós).",
+      gaza_p2: "Recepção pessoal do Ministro.",
+      gaza_p3: "Acesso direto a 22 Universidades.",
+      gaza_p4: "Nenhum requisito de língua ou sangue.",
+      diaspora_title: "A Punição Diáspora",
+      diaspora_p1: "12 anos de espera por um carimbo.",
+      diaspora_p2: "Insultados como \"Turistas\".",
+      diaspora_p3: "Taxas dobradas para €600.",
+      diaspora_p4: "Ameaça de cancelamento de direitos.",
+      cta_read_dossier: "LEIA O DOSSIÊ COMPLETO",
+    }
   },
   en: {
     nav: {
@@ -215,6 +413,8 @@ export const translations: Record<Language, TranslationContent> = {
       demands: "Demands",
       dossier: "Analytic Dossier",
       backHome: "Back to Home",
+      evidence_btn: "Video Evidence",
+      analysis_btn: "Data Analysis",
     },
     hero: {
       title_prefix: "The Tajani Decree",
@@ -277,6 +477,70 @@ export const translations: Record<Language, TranslationContent> = {
       cta_button: "Support the Cause",
       disclaimer: "Not affiliated with political parties. Independent civil initiative.",
     },
+    dossier: {
+      label: "Confidential Report",
+      title_line1: "THE TAJANI",
+      title_line2: "DOCTRINE",
+      quote: "\"A forensic analysis of the Architecture of Deception: how the Foreign Ministry funds authoritarian regimes while declaring war on the Italian diaspora.\"",
+      section1_title: "The Cynical Calculation",
+      section1_text1: "Italy is at an existential crossroads. Squeezed between unprecedented demographic winter and structural migratory pressure, Tajani's leadership has made a clear choice: ancient blood is no longer enough.",
+      section1_text2: "In this new model of \"Nation Inc.\", the citizen is no longer one who shares the nation's history, but one who is \"functional\" to the market. Diaspora children have been downgraded from \"brothers\" to \"budget liabilities\".",
+      section2_title: "The Foreign Ministry's ATM",
+      section2_intro: "While our consulates in South America collapse from lack of funds, Tajani has transformed the Foreign Ministry into a paymaster for unstable regimes.",
+      video_label: "Video Archive: Vista Agency",
+      video_protocol: "TUNISIA PROTOCOL",
+      video_quote: "\"The memorandum... is not just about migration management, it is an investment in stability...\"",
+      video_analysis: "ANALYSIS: The cited \"stability\" translates to funding coast guards, while funds are denied to Italian consulates.",
+      card_albania_title: "The Albanian Hypocrisy: €160 Million",
+      card_albania_text: "Minister Piantedosi confirmed that centers in Albania cost 160 million euros per year. A very expensive facade operation.",
+      card_tax_title: "The Tax of Shame: €600",
+      card_tax_text: "While we gift patrol boats to Tunisia, Tajani wants to double the citizenship tax for descendants to 600 euros.",
+      section3_title: "National Security Compromised",
+      section3_card_title: "Click Day Dossier",
+      section3_text: "The \"law and order\" narrative has collapsed. The \"Click Day\" system for work visas was infiltrated by organized crime.",
+      section3_subtext: "We don't say it, the Government itself admitted it. It is a national security breach.",
+      section3_video_label: "Video Testimony (Source: Il Sole 24 Ore)",
+      section3_video_quote: "\"Organized crime infiltrated the application management...\"",
+      section3_video_btn: "Watch the Confession",
+      section4_title: "The \"Ius Italiae\" Weapon",
+      section4_text1: "Forza Italia's \"Ius Italiae\" reform proposal is not a reform. It is a controlled demolition of Law 91/1992.",
+      section4_text2: "Tajani justifies this attack with the insulting myth of \"Passport Tourism\".",
+      section4_point_a_title: "The 2nd Generation Limit",
+      section4_point_a_desc: "If your great-grandfather was Italian, you are out. Retroactive cancellation of a birthright.",
+      section4_point_b_title: "Abolition of the 1861 Rule",
+      section4_point_b_desc: "They want to erase Italy's unitary history, denying citizenship to those descending from the fatherland's founders.",
+      section5_title: "The Trojan Horse: \"Ius Scholae\"",
+      section5_text1: "While closing the door to blood, Tajani throws open the one to Ius Scholae. The proposal: citizenship after one school cycle.",
+      section5_text2: "With projections indicating 1 million foreign students soon, Ius Scholae risks becoming an irreversible tool of demographic alteration.",
+      conclusion_title: "Conclusion",
+      conclusion_text: "We are facing a social engineering operation. Tajani and his technocrat allies have decided that Italy's future does not pass through São Paulo or Buenos Aires, but through Tunis and Islamabad.",
+      disclaimer_title: "Declaration of Independence",
+      disclaimer_text: "This site and dossier have NO political funding. We are not linked to parties. We are deeply disappointed citizens, descendants, and patriots.",
+    },
+    evidence: {
+      label: "Forensic Evidence Acquired",
+      title_line1: "The Narrative",
+      title_line2: "vs. Reality",
+      subtitle: "While our consulates close, air corridors open. See with your own eyes the Deputy Premier's double standard.",
+      video_source: "SOURCE: Official Channel Minister Tajani (October 2025)",
+      section1_title: "The Demographic Anomaly",
+      section1_text: "Watch closely at minutes 0:04 and 0:08. The government speaks of \"young students\", but images reveal elderly men aboard humanitarian flights funded by Italian taxes.",
+      section1_box_title: "Logical Contradiction",
+      section1_box_quote: "\"The goal is to train the future ruling class...\" — Antonio Tajani",
+      section1_box_analysis: "Tactical Analysis: If Italy suffers from a \"demographic winter\", why do we import elderly men while bureaucratically expelling young South American descendants?",
+      comparison_title: "Double Standards",
+      gaza_title: "The Gaza Privilege",
+      gaza_p1: "Free State flights (paid by us).",
+      gaza_p2: "Personal welcome by the Minister.",
+      gaza_p3: "Direct access to 22 Universities.",
+      gaza_p4: "No language or blood requirements.",
+      diaspora_title: "The Diaspora Punishment",
+      diaspora_p1: "12 years waiting for a stamp.",
+      diaspora_p2: "Insulted as \"Tourists\".",
+      diaspora_p3: "Taxes doubled to €600.",
+      diaspora_p4: "Threat of rights cancellation.",
+      cta_read_dossier: "READ FULL DOSSIER",
+    }
   },
   es: {
     nav: {
@@ -284,6 +548,8 @@ export const translations: Record<Language, TranslationContent> = {
       demands: "Exigencias",
       dossier: "Dossier Analítico",
       backHome: "Volver al Inicio",
+      evidence_btn: "Video Evidencia",
+      analysis_btn: "Análisis de Datos",
     },
     hero: {
       title_prefix: "El Decreto Tajani",
@@ -346,5 +612,69 @@ export const translations: Record<Language, TranslationContent> = {
       cta_button: "Apoya la Causa",
       disclaimer: "No afiliado a partidos políticos. Iniciativa civil independiente.",
     },
+    dossier: {
+      label: "Informe Confidencial",
+      title_line1: "LA DOCTRINA",
+      title_line2: "TAJANI",
+      quote: "\"Un análisis forense de la Arquitectura del Engaño: cómo la Farnesina financia regímenes autoritarios mientras declara la guerra a la diáspora italiana.\"",
+      section1_title: "El Cálculo Cínico",
+      section1_text1: "Italia se encuentra en una encrucijada existencial. Atrapada entre un invierno demográfico sin precedentes y una presión migratoria estructural, el liderazgo de Tajani ha tomado una decisión clara: la sangre antigua ya no es suficiente.",
+      section1_text2: "En este nuevo modelo de \"Nación S.A.\", el ciudadano ya no es quien comparte la historia de la nación, sino quien es \"funcional\" al mercado. Los hijos de la diáspora han sido degradados de \"hermanos\" a \"pasivos presupuestarios\".",
+      section2_title: "El \"Cajero Automático\" de la Farnesina",
+      section2_intro: "Mientras nuestros consulados en Sudamérica colapsan por falta de fondos, Tajani ha transformado el Ministerio de Asuntos Exteriores en un pagador para regímenes inestables.",
+      video_label: "Archivo de Video: Agencia Vista",
+      video_protocol: "PROTOCOLO TÚNEZ",
+      video_quote: "\"El memorando... no se trata solo de la gestión de flujos migratorios, es una inversión en estabilidad...\"",
+      video_analysis: "ANÁLISIS: La \"estabilidad\" citada se traduce en financiación de guardias costeras, mientras se niegan fondos a los consulados italianos.",
+      card_albania_title: "La Hipocresía Albanesa: €160 Millones",
+      card_albania_text: "El Ministro Piantedosi confirmó que los centros en Albania cuestan 160 millones de euros al año. Una operación de fachada carísima.",
+      card_tax_title: "El Impuesto de la Vergüenza: €600",
+      card_tax_text: "Mientras regalamos lanchas patrulleras a Túnez, Tajani quiere duplicar el impuesto de ciudadanía para descendientes a 600 euros.",
+      section3_title: "Seguridad Nacional Comprometida",
+      section3_card_title: "Dossier Click Day",
+      section3_text: "La narrativa de \"ley y orden\" ha colapsado. El sistema \"Click Day\" para visas de trabajo fue infiltrado por el crimen organizado.",
+      section3_subtext: "No lo decimos nosotros, el propio Gobierno lo admitió. Es una brecha de seguridad nacional.",
+      section3_video_label: "Video Testimonio (Fuente: Il Sole 24 Ore)",
+      section3_video_quote: "\"El crimen organizado se infiltró en la gestión de solicitudes...\"",
+      section3_video_btn: "Ver la Confesión",
+      section4_title: "El Arma \"Ius Italiae\"",
+      section4_text1: "La propuesta de reforma \"Ius Italiae\" no es una reforma. Es una demolición controlada de la Ley 91/1992.",
+      section4_text2: "Tajani justifica este ataque con el mito insultante del \"Turismo de Pasaporte\".",
+      section4_point_a_title: "El Límite de la 2ª Generación",
+      section4_point_a_desc: "Si tu bisabuelo era italiano, estás fuera. Cancelación retroactiva de un derecho de nacimiento.",
+      section4_point_b_title: "Abolición de la Regla 1861",
+      section4_point_b_desc: "Quieren borrar la historia unitaria de Italia, negando la ciudadanía a quienes descienden de los fundadores de la patria.",
+      section5_title: "El Caballo de Troya: \"Ius Scholae\"",
+      section5_text1: "Mientras cierra la puerta a la sangre, Tajani abre de par en par la del Ius Scholae. La propuesta: ciudadanía tras un ciclo escolar.",
+      section5_text2: "Con proyecciones que indican pronto 1 millón de estudiantes extranjeros, el Ius Scholae corre el riesgo de convertirse en una herramienta de alteración demográfica irreversible.",
+      conclusion_title: "Conclusión",
+      conclusion_text: "Estamos ante una operación de ingeniería social. Tajani y sus aliados tecnócratas han decidido que el futuro de Italia no pasa por São Paulo o Buenos Aires, sino por Túnez e Islamabad.",
+      disclaimer_title: "Declaración de Independencia",
+      disclaimer_text: "Este sitio y este dossier NO tienen financiación política. No estamos vinculados a partidos. Somos ciudadanos, descendientes y patriotas profundamente decepcionados.",
+    },
+    evidence: {
+      label: "Prueba Forense Adquirida",
+      title_line1: "La Narrativa",
+      title_line2: "vs. La Realidad",
+      subtitle: "Mientras nuestros consulados cierran, los corredores aéreos se abren. Mira con tus propios ojos el doble rasero del Viceprimer Ministro.",
+      video_source: "FUENTE: Canal Oficial Ministro Tajani (Octubre 2025)",
+      section1_title: "La Anomalía Demográfica",
+      section1_text: "Observa atentamente los minutos 0:04 y 0:08. El gobierno habla de \"jóvenes estudiantes\", pero las imágenes revelan hombres de edad avanzada a bordo de vuelos humanitarios financiados por impuestos italianos.",
+      section1_box_title: "Contradicción Lógica",
+      section1_box_quote: "\"El objetivo es formar la futura clase dirigente...\" — Antonio Tajani",
+      section1_box_analysis: "Análisis Táctico: Si Italia sufre un \"invierno demográfico\", ¿por qué importamos hombres ancianos mientras expulsamos burocráticamente a jóvenes descendientes sudamericanos?",
+      comparison_title: "Doble Rasero",
+      gaza_title: "El Privilegio Gaza",
+      gaza_p1: "Vuelos de Estado gratuitos (pagados por nosotros).",
+      gaza_p2: "Bienvenida personal del Ministro.",
+      gaza_p3: "Acceso directo a 22 Universidades.",
+      gaza_p4: "Sin requisitos de idioma o sangre.",
+      diaspora_title: "El Castigo Diáspora",
+      diaspora_p1: "12 años de espera por un sello.",
+      diaspora_p2: "Insultados como \"Turistas\".",
+      diaspora_p3: "Impuestos duplicados a €600.",
+      diaspora_p4: "Amenaza de cancelación de derechos.",
+      cta_read_dossier: "LEER DOSSIER COMPLETO",
+    }
   },
 };
