@@ -13,8 +13,8 @@ export default function Evidence() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Percorso video
-  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+  // Correção da lógica do path para evitar double slash
+  const basePath = import.meta.env.BASE_URL?.replace(/\/$/, "") || "";
   const videoPath = `${basePath}/tajani-video.mp4`;
 
   return (
@@ -40,15 +40,12 @@ export default function Evidence() {
                 <LanguageSwitcher />
             </div>
             <div className="flex gap-4">
-              <Link href="/dossier">
-                <Button className="border border-[#00FFFF] text-[#00FFFF] bg-transparent hover:bg-[#00FFFF]/10 transition-all duration-300">
+              {/* Correção: Estilizando o Link diretamente ao invés de aninhar Button */}
+              <Link href="/dossier" className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-[#00FFFF] text-[#00FFFF] bg-transparent hover:bg-[#00FFFF]/10 h-10 px-4 py-2 duration-300">
                   {t.nav.analysis_btn}
-                </Button>
               </Link>
-              <Link href="/">
-                <Button className="text-gray-300 hover:text-white bg-transparent hover:bg-white/5">
+              <Link href="/" className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-gray-300 hover:text-white bg-transparent hover:bg-white/5 h-10 px-4 py-2">
                   {t.nav.backHome}
-                </Button>
               </Link>
             </div>
           </div>
@@ -70,12 +67,9 @@ export default function Evidence() {
             </p>
           </header>
 
-          {/* VÍDEO CORRIGIDO: Faixa em baixo (sem sobrepor controles) */}
           <section className="bg-[#101622] border-2 border-[#FF1E56] rounded-lg shadow-[0_0_50px_rgba(255,30,86,0.15)] mb-16 overflow-hidden flex flex-col">
             <div className="relative w-full bg-black">
-                {/* Efeito de luz superior */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF1E56] to-transparent opacity-50 z-10"></div>
-                
                 <video 
                   controls 
                   className="max-h-[70vh] w-full object-contain mx-auto"
@@ -87,7 +81,6 @@ export default function Evidence() {
                 </video>
             </div>
             
-            {/* Faixa de Fonte (Agora estática em baixo, fundo sólido) */}
             <div className="w-full p-3 bg-[#1b1f27] border-t border-[#3b4354]">
               <p className="text-gray-400 text-sm font-mono flex items-center justify-center gap-2">
                 <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
@@ -96,9 +89,7 @@ export default function Evidence() {
             </div>
           </section>
 
-          {/* Análise de Inteligência */}
           <div className="space-y-16">
-            
             <section className="bg-gradient-to-r from-[#1b1f27] to-[#101622] p-8 border-l-4 border-[#FF1E56] rounded-r-lg">
               <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
                 <span className="text-[#FF1E56]">01.</span> {t.evidence.section1_title}
@@ -170,10 +161,8 @@ export default function Evidence() {
             </section>
 
             <section className="text-center pt-12 pb-8">
-              <Link href="/dossier">
-                <Button className="bg-[#39FF14] text-black font-black text-xl h-16 px-10 hover:bg-[#39FF14]/80 rounded-none skew-x-[-10deg] hover:skew-x-0 transition-transform shadow-[0_0_20px_rgba(57,255,20,0.4)]">
+              <Link href="/dossier" className="inline-flex items-center justify-center rounded-none text-xl font-black bg-[#39FF14] text-black h-16 px-10 hover:bg-[#39FF14]/80 skew-x-[-10deg] hover:skew-x-0 transition-transform shadow-[0_0_20px_rgba(57,255,20,0.4)]">
                   {t.evidence.cta_read_dossier}
-                </Button>
               </Link>
             </section>
           </div>
