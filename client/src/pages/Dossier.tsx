@@ -4,6 +4,7 @@ import PageTransition from "@/components/PageTransition";
 import SourceLink from "@/components/SourceLink";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { Button } from "@/components/ui/button";
 
 export default function Dossier() {
   const { t } = useLanguage();
@@ -16,6 +17,7 @@ export default function Dossier() {
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground dark font-sans selection:bg-[#FF1E56] selection:text-white">
         
+        {/* HEADER / FLAG LINE */}
         <div 
           className="sticky top-0 z-[51] w-full h-1.5"
           style={{
@@ -34,10 +36,10 @@ export default function Dossier() {
                 <LanguageSwitcher />
              </div>
             <div className="flex gap-4">
-               <Link href="/evidence" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-[#FF1E56] text-[#FF1E56] bg-transparent hover:bg-[#FF1E56]/10 hover:scale-105 h-10 px-4 py-2">
+               <Link href="/evidence" className="inline-flex items-center justify-center rounded-md text-sm font-medium border border-[#FF1E56] text-[#FF1E56] bg-transparent hover:bg-[#FF1E56]/10 hover:scale-105 h-10 px-4 py-2 transition-all">
                   {t.nav.evidence_btn}
               </Link>
-              <Link href="/" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-gray-300 hover:text-white bg-transparent h-10 px-4 py-2">
+              <Link href="/" className="inline-flex items-center justify-center rounded-md text-sm font-medium text-gray-300 hover:text-white bg-transparent h-10 px-4 py-2">
                   {t.nav.backHome}
               </Link>
             </div>
@@ -59,8 +61,9 @@ export default function Dossier() {
             </p>
           </header>
 
-          <div className="space-y-20 text-gray-300 leading-relaxed text-lg">
+          <div className="space-y-24 text-gray-300 leading-relaxed text-lg">
             
+            {/* 01. INTRODUÇÃO: O CÁLCULO CÍNICO */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
                 <span className="text-[#39FF14] text-6xl font-black opacity-50">01</span>
@@ -71,9 +74,15 @@ export default function Dossier() {
               </p>
               <p>
                 {t.dossier.section1_text2}
+                <SourceLink 
+                    href="https://italyget.com/wp-content/uploads/2025/06/Torino-Corte-Costituzionale-Ordinanza-Redacted.pdf" 
+                    label="Ordinanza Tribunale Torino" 
+                    sourceName="Tribunal de Turim (25/06/2025)" 
+                />
               </p>
             </section>
 
+            {/* 02. O BANCOMAT DA FARNESINA (Investigativo) */}
             <section className="bg-[#1b1f27] border-y border-[#3b4354] py-12 -mx-4 px-4 md:mx-0 md:px-8 md:rounded-xl">
               <h2 className="text-3xl font-bold text-white mb-8">
                 <span className="text-[#00FFFF]">02.</span> {t.dossier.section2_title}
@@ -82,6 +91,7 @@ export default function Dossier() {
                 {t.dossier.section2_intro}
               </p>
               
+              {/* VIDEO TUNISIA */}
               <div className="mb-12 bg-black/40 border border-[#00FFFF]/30 rounded-lg overflow-hidden shadow-lg">
                 <div className="bg-[#00FFFF]/10 px-4 py-2 border-b border-[#00FFFF]/30 flex justify-between items-center">
                     <div className="flex items-center gap-2">
@@ -145,10 +155,42 @@ export default function Dossier() {
               </div>
             </section>
 
+            {/* 03. O ESCUDO EUROPEU (NOVA SEÇÃO JURÍDICA) */}
+            <section className="bg-[#101622] border border-[#00FFFF]/30 p-8 rounded-lg relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-20">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#00FFFF" strokeWidth="1">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span className="text-[#00FFFF]">03.</span> {t.dossier.section_eu_title}
+                </h2>
+                <p className="mb-4 text-white font-medium">
+                    {t.dossier.section_eu_text}
+                </p>
+                <div className="bg-[#00FFFF]/10 border-l-4 border-[#00FFFF] p-4 my-4">
+                    <p className="text-sm text-[#00FFFF] font-mono mb-2">JURISPRUDÊNCIA VINCULANTE</p>
+                    <p className="italic">{t.dossier.section_eu_case}</p>
+                    <div className="mt-2">
+                         <SourceLink 
+                            href="https://curia.europa.eu/juris/liste.jsf?num=C-221/17" 
+                            label="Caso Tjebbes (C-221/17)" 
+                            sourceName="Tribunal de Justiça da UE" 
+                        />
+                         <SourceLink 
+                            href="https://curia.europa.eu/juris/liste.jsf?num=C-135/08" 
+                            label="Caso Rottmann (C-135/08)" 
+                            sourceName="Tribunal de Justiça da UE" 
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* 04. SEGURANÇA NACIONAL / CLICK DAY (Investigativo) */}
             <section className="relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FF1E56] to-transparent"></div>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
-                <span className="text-[#FF1E56] text-6xl font-black opacity-50">03</span>
+                <span className="text-[#FF1E56] text-6xl font-black opacity-50">04</span>
                 {t.dossier.section3_title}
               </h2>
               <div className="bg-[#FF1E56]/5 p-6 rounded border border-[#FF1E56]/20 mb-6">
@@ -165,6 +207,7 @@ export default function Dossier() {
                   />
                 </p>
                 
+                {/* VIDEO MELONI/CLICK DAY */}
                 <div className="mt-6 bg-black/60 p-4 rounded border border-gray-800">
                    <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">{t.dossier.section3_video_label}</p>
                    <div className="flex flex-col md:flex-row gap-4 items-center">
@@ -188,9 +231,30 @@ export default function Dossier() {
               </div>
             </section>
 
+             {/* 05. FORÇA MAIOR E PRENOT@MI (NOVA SEÇÃO JURÍDICA) */}
+            <section>
+                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span className="text-[#39FF14]">05.</span> {t.dossier.section_force_majeure_title}
+                </h2>
+                <p className="mb-4">
+                    {t.dossier.section_force_majeure_text}
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                     <div className="bg-[#1b1f27] p-6 rounded border border-gray-700 hover:border-[#39FF14] transition-colors">
+                        <h4 className="text-[#39FF14] font-bold mb-2 uppercase text-sm">O Fato Administrativo</h4>
+                        <p className="text-sm text-gray-400">Filas de 10 anos e bugs no sistema (Prenot@mi) impediram o agendamento tempestivo de milhares de requerentes.</p>
+                     </div>
+                     <div className="bg-[#1b1f27] p-6 rounded border border-gray-700 hover:border-[#39FF14] transition-colors">
+                        <h4 className="text-[#39FF14] font-bold mb-2 uppercase text-sm">A Consequência Jurídica</h4>
+                        <p className="text-sm text-gray-400">O Estado não pode punir o cidadão pela sua própria ineficiência. Princípio <em>"Ad impossibilia nemo tenetur"</em>.</p>
+                     </div>
+                </div>
+            </section>
+
+            {/* 06. O ATAQUE DO IUS ITALIAE (Investigativo) */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
-                <span className="text-white text-6xl font-black opacity-20">04</span>
+                <span className="text-white text-6xl font-black opacity-20">06</span>
                 {t.dossier.section4_title}
               </h2>
               <p className="mb-6 font-medium text-white">
@@ -218,8 +282,26 @@ export default function Dossier() {
               </div>
             </section>
 
+             {/* 07. ARMADILHA PARA MENORES (NOVA SEÇÃO JURÍDICA) */}
+             <section className="border-l-4 border-red-500 pl-6 py-2 my-12">
+                <h2 className="text-3xl font-bold text-white mb-6">07. {t.dossier.section_minors_title}</h2>
+                <p className="mb-4">{t.dossier.section_minors_text}</p>
+                <div className="bg-red-500/10 border border-red-500/30 p-4 rounded">
+                    <p className="text-[#FF1E56] font-bold text-sm mb-1">ALERTA DE ILEGALIDADE ADMINISTRATIVA</p>
+                    <p className="text-gray-300 text-sm">{t.dossier.section_minors_circular}</p>
+                     <div className="mt-2">
+                        <SourceLink 
+                            href="https://italyget.com/benefit-of-law-a-category-invented-by-circular-26185-the-lazio-tar-decides-on-november-12th/" 
+                            label="Impugnação TAR Lazio" 
+                            sourceName="Recurso Administrativo Coletivo" 
+                        />
+                    </div>
+                </div>
+            </section>
+
+             {/* 08. IUS SCHOLAE E DEMOGRAFIA (Investigativo) */}
             <section>
-              <h2 className="text-3xl font-bold text-white mb-6">05. {t.dossier.section5_title}</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">08. {t.dossier.section5_title}</h2>
               <p className="mb-4">
                 {t.dossier.section5_text1}
               </p>
@@ -233,6 +315,7 @@ export default function Dossier() {
               </p>
             </section>
 
+            {/* CONCLUSÃO E AÇÃO */}
             <section className="border-t border-gray-700 pt-16 mt-16">
               <h2 className="text-4xl font-black text-white mb-8">{t.dossier.conclusion_title}</h2>
               <p className="text-xl text-gray-300 font-medium mb-8">
@@ -245,7 +328,7 @@ export default function Dossier() {
                   {t.dossier.disclaimer_text}
                 </p>
                 <p className="text-gray-500 text-xs mt-4 pt-4 border-t border-gray-800">
-                  Fonti Dati: Fondazione ISMU, Ministero dell'Interno, Il Sole 24 Ore, SkyTG24, Atti Parlamentari.
+                  Fontes: Análise Jurídica Exaustiva da Lei 74/2025, Sentença Corte Costituzionale 142/2025, Parecer CGIE, Il Sole 24 Ore, Atti Parlamentari.
                 </p>
               </div>
             </section>
