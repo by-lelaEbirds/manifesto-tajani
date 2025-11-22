@@ -17,7 +17,7 @@ export default function Dossier() {
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground dark font-sans selection:bg-[#FF1E56] selection:text-white">
         
-        {/* PROGRESS BAR */}
+        {/* HEADER / FLAG LINE */}
         <div 
           className="sticky top-0 z-[51] w-full h-1.5"
           style={{
@@ -196,7 +196,7 @@ export default function Dossier() {
               </div>
             </section>
 
-             {/* 04. A SENTENÇA MONITÓRIA (Novo Jurídico) */}
+             {/* 04. A SENTENÇA MONITÓRIA (Jurídico) */}
              <section className="bg-gradient-to-r from-[#1b1f27] to-[#101622] p-8 rounded-lg border-l-4 border-yellow-500">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                     <span className="text-yellow-500">04.</span> {t.dossier.section_court_title}
@@ -255,7 +255,7 @@ export default function Dossier() {
                  <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                     <span className="text-[#39FF14]">06.</span> {t.dossier.section_force_majeure_title}
                 </h2>
-                <p className="mb-4 text-lg">
+                <p className="mb-4 text-lg text-gray-300">
                     {t.dossier.section_force_majeure_text}
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -297,7 +297,7 @@ export default function Dossier() {
                   <p className="mb-4 font-medium text-white text-xl border-l-4 border-white pl-4">
                     {t.dossier.section4_text1}
                   </p>
-                  <p className="text-gray-400">
+                  <p className="text-gray-400 text-lg">
                     {t.dossier.section4_text2}
                   </p>
               </div>
@@ -330,21 +330,47 @@ export default function Dossier() {
                   <p className="text-gray-400">
                     {t.dossier.section5_text2}
                     <SourceLink 
-                        href="https://www.ismu.org/in-10-anni-gli-alunni-con-background-migratorio-potranno-arrivare-a-un-milione/" 
-                        label="Dati Ufficiali ISMU 2024" 
-                        sourceName="Fondazione ISMU - Proiezione 1 Milione" 
+                        href="https://www.cinformi.it/Comunicazione/Notizie/30-Rapporto-ISMU-sulle-migrazioni" 
+                        label="30° Rapporto ISMU 2025" 
+                        sourceName="Cinformi / Fondazione ISMU" 
                     />
                   </p>
               </div>
             </section>
 
+            {/* CONCLUSÃO: PERSPECTIVAS JUDICIAIS (CARDS DE BATALHA) */}
             <section className="border-t border-gray-700 pt-16 mt-16">
               <h2 className="text-4xl font-black text-white mb-8">{t.dossier.conclusion_title}</h2>
-              <p className="text-xl text-gray-300 font-medium mb-8">
+              <p className="text-xl text-gray-300 font-medium mb-12 max-w-3xl">
                 {t.dossier.conclusion_text}
               </p>
               
-              <div className="bg-[#101622] p-8 rounded-lg border border-gray-800 mt-12">
+              {/* CARDS DE BATALHA JUDICIAL */}
+              <div className="grid md:grid-cols-2 gap-8 mb-16">
+                  {/* Front Constitucional */}
+                  <div className="bg-[#1b1f27] border border-[#00FFFF]/50 p-8 rounded-xl relative group hover:shadow-[0_0_30px_rgba(0,255,255,0.1)] transition-all">
+                      <div className="absolute top-0 right-0 bg-[#00FFFF] text-black text-xs font-bold px-3 py-1 rounded-bl-lg uppercase">
+                          Tribunale di Torino
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4 text-[#00FFFF]">{t.dossier.conclusion_turin_title}</h3>
+                      <p className="text-gray-400 leading-relaxed">
+                          {t.dossier.conclusion_turin_desc}
+                      </p>
+                  </div>
+
+                  {/* Front Administrativo */}
+                  <div className="bg-[#1b1f27] border border-[#FF1E56]/50 p-8 rounded-xl relative group hover:shadow-[0_0_30px_rgba(255,30,86,0.1)] transition-all">
+                      <div className="absolute top-0 right-0 bg-[#FF1E56] text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase">
+                          TAR del Lazio
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4 text-[#FF1E56]">{t.dossier.conclusion_lazio_title}</h3>
+                      <p className="text-gray-400 leading-relaxed">
+                          {t.dossier.conclusion_lazio_desc}
+                      </p>
+                  </div>
+              </div>
+              
+              <div className="bg-[#101622] p-8 rounded-lg border border-gray-800">
                 <h4 className="text-gray-500 text-xs uppercase tracking-widest mb-4">{t.dossier.disclaimer_title}</h4>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {t.dossier.disclaimer_text}
