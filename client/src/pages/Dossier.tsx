@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useEffect } from "react";
 import PageTransition from "@/components/PageTransition";
@@ -17,7 +16,6 @@ export default function Dossier() {
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground dark font-sans selection:bg-[#FF1E56] selection:text-white">
         
-        {/* LINHA DA BANDEIRA ITALIANA */}
         <div 
           className="sticky top-0 z-[51] w-full h-1.5"
           style={{
@@ -36,15 +34,11 @@ export default function Dossier() {
                 <LanguageSwitcher />
              </div>
             <div className="flex gap-4">
-               <Link href="/evidence">
-                <Button className="border border-[#FF1E56] text-[#FF1E56] bg-transparent hover:bg-[#FF1E56]/10 hover:scale-105 transition-transform">
+               <Link href="/evidence" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-[#FF1E56] text-[#FF1E56] bg-transparent hover:bg-[#FF1E56]/10 hover:scale-105 h-10 px-4 py-2">
                   {t.nav.evidence_btn}
-                </Button>
               </Link>
-              <Link href="/">
-                <Button className="text-gray-300 hover:text-white bg-transparent">
+              <Link href="/" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-gray-300 hover:text-white bg-transparent h-10 px-4 py-2">
                   {t.nav.backHome}
-                </Button>
               </Link>
             </div>
           </div>
@@ -67,7 +61,6 @@ export default function Dossier() {
 
           <div className="space-y-20 text-gray-300 leading-relaxed text-lg">
             
-            {/* 01. Introduzione Agressiva */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
                 <span className="text-[#39FF14] text-6xl font-black opacity-50">01</span>
@@ -81,7 +74,6 @@ export default function Dossier() {
               </p>
             </section>
 
-            {/* 02. Il Bancomat della Farnesina */}
             <section className="bg-[#1b1f27] border-y border-[#3b4354] py-12 -mx-4 px-4 md:mx-0 md:px-8 md:rounded-xl">
               <h2 className="text-3xl font-bold text-white mb-8">
                 <span className="text-[#00FFFF]">02.</span> {t.dossier.section2_title}
@@ -90,7 +82,6 @@ export default function Dossier() {
                 {t.dossier.section2_intro}
               </p>
               
-              {/* VIDEO TUNISIA (Agenzia Vista) INTEGRATO */}
               <div className="mb-12 bg-black/40 border border-[#00FFFF]/30 rounded-lg overflow-hidden shadow-lg">
                 <div className="bg-[#00FFFF]/10 px-4 py-2 border-b border-[#00FFFF]/30 flex justify-between items-center">
                     <div className="flex items-center gap-2">
@@ -154,7 +145,6 @@ export default function Dossier() {
               </div>
             </section>
 
-            {/* 03. Sicurezza Nazionale Compromessa */}
             <section className="relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FF1E56] to-transparent"></div>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
@@ -175,7 +165,6 @@ export default function Dossier() {
                   />
                 </p>
                 
-                {/* VIDEO PROVA INTEGRATO (IL SOLE 24 ORE / MELONI) */}
                 <div className="mt-6 bg-black/60 p-4 rounded border border-gray-800">
                    <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">{t.dossier.section3_video_label}</p>
                    <div className="flex flex-col md:flex-row gap-4 items-center">
@@ -199,7 +188,6 @@ export default function Dossier() {
               </div>
             </section>
 
-            {/* 04. O Ataque do Ius Italiae */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
                 <span className="text-white text-6xl font-black opacity-20">04</span>
@@ -230,7 +218,6 @@ export default function Dossier() {
               </div>
             </section>
 
-             {/* 05. Ius Scholae e Dati Demografici */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6">05. {t.dossier.section5_title}</h2>
               <p className="mb-4">
@@ -252,7 +239,6 @@ export default function Dossier() {
                 {t.dossier.conclusion_text}
               </p>
               
-              {/* DISCLAIMER AGRESSIVO */}
               <div className="bg-[#101622] p-8 rounded-lg border border-gray-800 mt-12">
                 <h4 className="text-gray-500 text-xs uppercase tracking-widest mb-4">{t.dossier.disclaimer_title}</h4>
                 <p className="text-gray-400 text-sm leading-relaxed">
