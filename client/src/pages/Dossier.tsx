@@ -27,7 +27,7 @@ export default function Dossier() {
 
         <nav className="sticky top-1.5 z-50 w-full bg-black/90 backdrop-blur-md border-b border-[#3b4354]">
           <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-             <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4">
                 <Link href="/">
                   <span className="text-xl font-bold text-white cursor-pointer hover:text-[#39FF14] transition-colors hidden sm:block">
                     Manifesto Tajani
@@ -130,14 +130,14 @@ export default function Dossier() {
 
               <div className="grid md:grid-cols-2 gap-8 my-8">
                 <div className="bg-black/40 p-6 rounded border border-red-500/30 relative overflow-hidden">
-                   <div className="absolute top-0 right-0 p-1 bg-red-500/20 text-[10px] text-red-500 font-bold">DATI UFFICIALI</div>
+                   <div className="absolute top-0 right-0 p-1 bg-red-500/20 text-[10px] text-red-500 font-bold">MINISTERO INTERNO</div>
                    <h4 className="text-[#FF1E56] font-bold mb-2 text-xl">{t.dossier.card_albania_title}</h4>
                    <p className="text-sm">
                      {t.dossier.card_albania_text} 
                      <SourceLink 
                         href="https://tg24.sky.it/politica/2024/08/07/centro-migranti-albania-accordo-piantedosi" 
                         label="Confessione Piantedosi" 
-                        sourceName="Sky TG24 / Min. Interno" 
+                        sourceName="Sky TG24" 
                      />
                    </p>
                 </div>
@@ -147,7 +147,7 @@ export default function Dossier() {
                    <SourceLink 
                      href="https://temi.camera.it/leg19/provvedimento/d-l-36-2025-disposizioni-urgenti-in-materia-di-cittadinanza.html" 
                      label="D.L. 36/2025" 
-                     sourceName="Atti Camera dei Deputati" 
+                     sourceName="Camera dei Deputati" 
                    />
                    </p>
                 </div>
@@ -183,7 +183,7 @@ export default function Dossier() {
                         <p className="text-white text-sm italic">
                           {t.dossier.section3_video_quote}
                         </p>
-                        <p className="text-[#FF1E56] text-xs font-bold mt-2">— Ammissione Ufficiale del Governo</p>
+                        <p className="text-[#FF1E56] text-xs font-bold mt-2">— Governo Italiano</p>
                       </div>
                       <a 
                         href="https://www.youtube.com/watch?v=-DLHvldxuus" 
@@ -241,7 +241,7 @@ export default function Dossier() {
                 <SourceLink 
                     href="https://www.ismu.org/in-10-anni-gli-alunni-con-background-migratorio-potranno-arrivare-a-un-milione/" 
                     label="Dati Ufficiali ISMU 2024" 
-                    sourceName="Fondazione ISMU - Proiezione 1 Milione" 
+                    sourceName="Fondazione ISMU" 
                 />
               </p>
             </section>
@@ -259,7 +259,7 @@ export default function Dossier() {
                   {t.dossier.disclaimer_text}
                 </p>
                 <p className="text-gray-500 text-xs mt-4 pt-4 border-t border-gray-800">
-                  Fonti Dati: Fondazione ISMU, Ministero dell'Interno, Il Sole 24 Ore, SkyTG24, Atti Parlamentari.
+                  Fonti: Fondazione ISMU, Ministero dell'Interno, Il Sole 24 Ore, Atti Camera dei Deputati.
                 </p>
               </div>
             </section>
