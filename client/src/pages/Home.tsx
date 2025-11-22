@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import PageTransition from "@/components/PageTransition";
 import SourceLink from "@/components/SourceLink";
-import { useLanguage } from "@/contexts/LanguageContext"; // Importar Hook
-import LanguageSwitcher from "@/components/LanguageSwitcher"; // Importar Switcher
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Home() {
-  const { t } = useLanguage(); // Usar o hook de tradução
+  const { t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -35,15 +35,13 @@ export default function Home() {
             <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="flex items-center gap-4">
                   <h1 className="text-xl font-bold text-white hidden sm:block">Manifesto Tajani</h1>
-                  {/* Language Switcher inserido aqui para mobile/desktop */}
                   <LanguageSwitcher />
                 </div>
 
                 <div className="flex gap-4 items-center">
-                <Link href="/dossier">
-                    <button className="text-[#00FFFF] hover:text-[#39FF14] transition-colors text-sm font-medium uppercase tracking-wider hidden md:block">
+                {/* Correção: Link estilizado diretamente, sem tag button interna */}
+                <Link href="/dossier" className="text-[#00FFFF] hover:text-[#39FF14] transition-colors text-sm font-medium uppercase tracking-wider hidden md:block cursor-pointer">
                     {t.nav.dossier}
-                    </button>
                 </Link>
                 <button onClick={() => scrollToSection("manifesto")} className="text-gray-300 hover:text-[#39FF14] transition-colors text-sm">
                   {t.nav.manifesto}
@@ -73,16 +71,12 @@ export default function Home() {
                     {t.hero.cta_manifesto}
                 </Button>
                 
-                <Link href="/dossier">
-                    <Button className="bg-[#00FFFF]/10 text-[#00FFFF] font-bold text-lg h-12 px-8 hover:bg-[#00FFFF]/20 transition-all rounded-sm border border-[#00FFFF]">
+                <Link href="/dossier" className="inline-flex items-center justify-center rounded-sm text-lg font-bold transition-all bg-[#00FFFF]/10 text-[#00FFFF] h-12 px-8 hover:bg-[#00FFFF]/20 border border-[#00FFFF]">
                     {t.hero.cta_dossier}
-                    </Button>
                 </Link>
 
-                <Link href="/evidence">
-                    <Button className="bg-[#FF1E56] text-white font-bold text-lg h-12 px-8 hover:bg-[#FF1E56]/80 transition-all rounded-sm border border-[#FF1E56] animate-pulse">
+                <Link href="/evidence" className="inline-flex items-center justify-center rounded-sm text-lg font-bold transition-all bg-[#FF1E56] text-white h-12 px-8 hover:bg-[#FF1E56]/80 border border-[#FF1E56] animate-pulse">
                     {t.hero.cta_evidence}
-                    </Button>
                 </Link>
                 </div>
 
