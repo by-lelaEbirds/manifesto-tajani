@@ -250,22 +250,22 @@ export default function Dossier() {
                 </div>
             </section>
 
-            {/* 06. FORÇA MAIOR E PRENOT@MI */}
+            {/* 06. FORÇA MAIOR E PRENOT@MI (Expandido) */}
             <section className="mt-8">
                  <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                     <span className="text-[#39FF14]">06.</span> {t.dossier.section_force_majeure_title}
                 </h2>
-                <p className="mb-4">
+                <p className="mb-4 text-lg">
                     {t.dossier.section_force_majeure_text}
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                      <div className="bg-[#1b1f27] p-6 rounded border border-gray-700 hover:border-[#39FF14] transition-colors">
-                        <h4 className="text-[#39FF14] font-bold mb-2 uppercase text-sm">O Fato Administrativo</h4>
-                        <p className="text-sm text-gray-400">Filas de 10 anos e bugs no sistema (Prenot@mi) impediram o agendamento tempestivo de milhares de requerentes.</p>
+                        <h4 className="text-[#39FF14] font-bold mb-2 uppercase text-sm">{t.dossier.section_force_majeure_fact_title}</h4>
+                        <p className="text-sm text-gray-400">{t.dossier.section_force_majeure_fact_desc}</p>
                      </div>
                      <div className="bg-[#1b1f27] p-6 rounded border border-gray-700 hover:border-[#39FF14] transition-colors">
-                        <h4 className="text-[#39FF14] font-bold mb-2 uppercase text-sm">A Consequência Jurídica</h4>
-                        <p className="text-sm text-gray-400">O Estado não pode punir o cidadão pela sua própria ineficiência. Princípio <em>"Ad impossibilia nemo tenetur"</em>.</p>
+                        <h4 className="text-[#39FF14] font-bold mb-2 uppercase text-sm">{t.dossier.section_force_majeure_law_title}</h4>
+                        <p className="text-sm text-gray-400">{t.dossier.section_force_majeure_law_desc}</p>
                      </div>
                 </div>
             </section>
@@ -287,51 +287,55 @@ export default function Dossier() {
                 </div>
             </section>
 
-            {/* 08. IUS SCHOLAE E DEMOGRAFIA */}
+            {/* 08. IUS ITALIAE - ATAQUE À HISTÓRIA (Expandido) */}
             <section>
               <h2 className="text-4xl font-bold text-white mb-8 flex items-baseline gap-4">
                 <span className="text-white text-6xl font-black opacity-20">08</span>
                 {t.dossier.section4_title}
               </h2>
-              <p className="mb-6 font-medium text-white">
-                {t.dossier.section4_text1}
-              </p>
-              <p className="mb-8">
-                {t.dossier.section4_text2}
-              </p>
+              <div className="mb-8">
+                  <p className="mb-4 font-medium text-white text-xl border-l-4 border-white pl-4">
+                    {t.dossier.section4_text1}
+                  </p>
+                  <p className="text-gray-400">
+                    {t.dossier.section4_text2}
+                  </p>
+              </div>
 
               <div className="space-y-4">
-                <div className="flex gap-4 items-start bg-[#2a2f3a] p-4 rounded">
+                <div className="flex gap-4 items-start bg-[#2a2f3a] p-6 rounded border border-gray-700">
                   <span className="font-bold text-[#00FFFF] text-xl">A.</span>
                   <div>
-                    <h4 className="text-white font-bold">{t.dossier.section4_point_a_title}</h4>
+                    <h4 className="text-white font-bold mb-1">{t.dossier.section4_point_a_title}</h4>
                     <p className="text-sm text-gray-400">{t.dossier.section4_point_a_desc}</p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-start bg-[#2a2f3a] p-4 rounded">
+                <div className="flex gap-4 items-start bg-[#2a2f3a] p-6 rounded border border-gray-700">
                   <span className="font-bold text-[#00FFFF] text-xl">B.</span>
                   <div>
-                    <h4 className="text-white font-bold">{t.dossier.section4_point_b_title}</h4>
+                    <h4 className="text-white font-bold mb-1">{t.dossier.section4_point_b_title}</h4>
                     <p className="text-sm text-gray-400">{t.dossier.section4_point_b_desc}</p>
                   </div>
                 </div>
               </div>
             </section>
 
-             {/* 09. O CAVALO DE TROIA (Ius Scholae) */}
-            <section>
+             {/* 09. ENGENHARIA DEMOGRÁFICA (IUS SCHOLAE) */}
+            <section className="mt-12">
               <h2 className="text-3xl font-bold text-white mb-6">09. {t.dossier.section5_title}</h2>
-              <p className="mb-4">
-                {t.dossier.section5_text1}
-              </p>
-              <p className="mb-4">
-                {t.dossier.section5_text2}
-                <SourceLink 
-                    href="https://www.ismu.org/in-10-anni-gli-alunni-con-background-migratorio-potranno-arrivare-a-un-milione/" 
-                    label="Dati Ufficiali ISMU 2024" 
-                    sourceName="Fondazione ISMU - Proiezione 1 Milione" 
-                />
-              </p>
+              <div className="bg-gradient-to-b from-[#1b1f27] to-transparent p-6 rounded-lg border-t border-gray-700">
+                  <p className="mb-4 text-lg text-white">
+                    {t.dossier.section5_text1}
+                  </p>
+                  <p className="text-gray-400">
+                    {t.dossier.section5_text2}
+                    <SourceLink 
+                        href="https://www.ismu.org/in-10-anni-gli-alunni-con-background-migratorio-potranno-arrivare-a-un-milione/" 
+                        label="Dati Ufficiali ISMU 2024" 
+                        sourceName="Fondazione ISMU - Proiezione 1 Milione" 
+                    />
+                  </p>
+              </div>
             </section>
 
             <section className="border-t border-gray-700 pt-16 mt-16">
